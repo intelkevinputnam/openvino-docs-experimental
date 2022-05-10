@@ -1,0 +1,441 @@
+.. index:: pair: namespace; ngraph::pass
+.. _doxid-namespacengraph_1_1pass:
+
+namespace ngraph::pass
+======================
+
+.. toctree::
+	:hidden:
+
+	itt <namespacengraph_1_1pass_1_1itt.rst>
+	low_precision <namespacengraph_1_1pass_1_1low_precision.rst>
+	AddAddFusion <classngraph_1_1pass_1_1AddAddFusion.rst>
+	AddMultiplyFusion <classngraph_1_1pass_1_1AddMultiplyFusion.rst>
+	AlignEltwiseInputRanks <classngraph_1_1pass_1_1AlignEltwiseInputRanks.rst>
+	BatchNormDecomposition <classngraph_1_1pass_1_1BatchNormDecomposition.rst>
+	CommonOptimizations <classngraph_1_1pass_1_1CommonOptimizations.rst>
+	CompressQuantizeWeights <classngraph_1_1pass_1_1CompressQuantizeWeights.rst>
+	ConvAddFusion <classngraph_1_1pass_1_1ConvAddFusion.rst>
+	ConvFusion <classngraph_1_1pass_1_1ConvFusion.rst>
+	ConvMultiplyFusion <classngraph_1_1pass_1_1ConvMultiplyFusion.rst>
+	ConvertBroadcast3 <classngraph_1_1pass_1_1ConvertBroadcast3.rst>
+	ConvertBroadcastToTiles <classngraph_1_1pass_1_1ConvertBroadcastToTiles.rst>
+	ConvertConvolution <classngraph_1_1pass_1_1ConvertConvolution.rst>
+	ConvertConvolutions <classngraph_1_1pass_1_1ConvertConvolutions.rst>
+	ConvertDeconvolution <classngraph_1_1pass_1_1ConvertDeconvolution.rst>
+	ConvertDepthToSpace <classngraph_1_1pass_1_1ConvertDepthToSpace.rst>
+	ConvertDivide <classngraph_1_1pass_1_1ConvertDivide.rst>
+	ConvertDivideWithConstant <classngraph_1_1pass_1_1ConvertDivideWithConstant.rst>
+	ConvertGELU <classngraph_1_1pass_1_1ConvertGELU.rst>
+	ConvertGRUCellMatcher <classngraph_1_1pass_1_1ConvertGRUCellMatcher.rst>
+	ConvertGatherToGatherIEMatcher <classngraph_1_1pass_1_1ConvertGatherToGatherIEMatcher.rst>
+	ConvertGatherTreeToGatherTreeIEMatcher <classngraph_1_1pass_1_1ConvertGatherTreeToGatherTreeIEMatcher.rst>
+	ConvertGroupConvolution <classngraph_1_1pass_1_1ConvertGroupConvolution.rst>
+	ConvertGroupDeconvolution <classngraph_1_1pass_1_1ConvertGroupDeconvolution.rst>
+	ConvertHardSigmoidToLegacyMatcher <classngraph_1_1pass_1_1ConvertHardSigmoidToLegacyMatcher.rst>
+	ConvertInterpolateToInterpOrResampleMatcher <classngraph_1_1pass_1_1ConvertInterpolateToInterpOrResampleMatcher.rst>
+	ConvertLRNToLegacyMatcher <classngraph_1_1pass_1_1ConvertLRNToLegacyMatcher.rst>
+	ConvertLSTMCellMatcher <classngraph_1_1pass_1_1ConvertLSTMCellMatcher.rst>
+	ConvertMatMulToFC <classngraph_1_1pass_1_1ConvertMatMulToFC.rst>
+	ConvertMatMulToFCorGemm <classngraph_1_1pass_1_1ConvertMatMulToFCorGemm.rst>
+	ConvertMatMulToGemm <classngraph_1_1pass_1_1ConvertMatMulToGemm.rst>
+	ConvertMatrixNmsToMatrixNmsIE <classngraph_1_1pass_1_1ConvertMatrixNmsToMatrixNmsIE.rst>
+	ConvertMinimum <classngraph_1_1pass_1_1ConvertMinimum.rst>
+	ConvertMod <classngraph_1_1pass_1_1ConvertMod.rst>
+	ConvertMulAddToScaleShiftOrPower <classngraph_1_1pass_1_1ConvertMulAddToScaleShiftOrPower.rst>
+	ConvertMulOrAddFinally <classngraph_1_1pass_1_1ConvertMulOrAddFinally.rst>
+	ConvertMulticlassNmsToMulticlassNmsIE <classngraph_1_1pass_1_1ConvertMulticlassNmsToMulticlassNmsIE.rst>
+	ConvertNMS1ToNMS5 <classngraph_1_1pass_1_1ConvertNMS1ToNMS5.rst>
+	ConvertNMS3ToNMS5 <classngraph_1_1pass_1_1ConvertNMS3ToNMS5.rst>
+	ConvertNMS4ToNMS5 <classngraph_1_1pass_1_1ConvertNMS4ToNMS5.rst>
+	ConvertNMS5ToLegacyMatcher <classngraph_1_1pass_1_1ConvertNMS5ToLegacyMatcher.rst>
+	ConvertNMSToNMSIEInternal <classngraph_1_1pass_1_1ConvertNMSToNMSIEInternal.rst>
+	ConvertNMSToNMSIEMatcher <classngraph_1_1pass_1_1ConvertNMSToNMSIEMatcher.rst>
+	ConvertNegative <classngraph_1_1pass_1_1ConvertNegative.rst>
+	ConvertNormalizeL2ToLegacyMatcher <classngraph_1_1pass_1_1ConvertNormalizeL2ToLegacyMatcher.rst>
+	ConvertNormalizeL2WithMulToNormalizeIE <classngraph_1_1pass_1_1ConvertNormalizeL2WithMulToNormalizeIE.rst>
+	ConvertOneHotToOneHotIEMatcher <classngraph_1_1pass_1_1ConvertOneHotToOneHotIEMatcher.rst>
+	ConvertOpSet1ToLegacy <classngraph_1_1pass_1_1ConvertOpSet1ToLegacy.rst>
+	ConvertOpSet2ToOpSet1 <classngraph_1_1pass_1_1ConvertOpSet2ToOpSet1.rst>
+	ConvertOpSet3ToOpSet2 <classngraph_1_1pass_1_1ConvertOpSet3ToOpSet2.rst>
+	ConvertPReLUToReLUIE <classngraph_1_1pass_1_1ConvertPReLUToReLUIE.rst>
+	ConvertPadToLegacyMatcher <classngraph_1_1pass_1_1ConvertPadToLegacyMatcher.rst>
+	ConvertPowerToPowerIEMatcher <classngraph_1_1pass_1_1ConvertPowerToPowerIEMatcher.rst>
+	ConvertPrecision <classngraph_1_1pass_1_1ConvertPrecision.rst>
+	ConvertProposal4ToLegacyMatcher <classngraph_1_1pass_1_1ConvertProposal4ToLegacyMatcher.rst>
+	ConvertProposalToLegacyMatcher <classngraph_1_1pass_1_1ConvertProposalToLegacyMatcher.rst>
+	ConvertRNNCellMatcher <classngraph_1_1pass_1_1ConvertRNNCellMatcher.rst>
+	ConvertReduceMaxToPooling <classngraph_1_1pass_1_1ConvertReduceMaxToPooling.rst>
+	ConvertReduceMeanToPooling <classngraph_1_1pass_1_1ConvertReduceMeanToPooling.rst>
+	ConvertReduceSumToPooling <classngraph_1_1pass_1_1ConvertReduceSumToPooling.rst>
+	ConvertReduceToPooling <classngraph_1_1pass_1_1ConvertReduceToPooling.rst>
+	ConvertSeluToSeluIEMatcher <classngraph_1_1pass_1_1ConvertSeluToSeluIEMatcher.rst>
+	ConvertSequenceToTensorIterator <classngraph_1_1pass_1_1ConvertSequenceToTensorIterator.rst>
+	ConvertShapeOf3 <classngraph_1_1pass_1_1ConvertShapeOf3.rst>
+	ConvertShuffleChannels3 <classngraph_1_1pass_1_1ConvertShuffleChannels3.rst>
+	ConvertSpaceToDepth <classngraph_1_1pass_1_1ConvertSpaceToDepth.rst>
+	ConvertSqrtToPowerIEMatcher <classngraph_1_1pass_1_1ConvertSqrtToPowerIEMatcher.rst>
+	ConvertStridedSliceToCropMatcher <classngraph_1_1pass_1_1ConvertStridedSliceToCropMatcher.rst>
+	ConvertSubtract <classngraph_1_1pass_1_1ConvertSubtract.rst>
+	ConvertSwishToSwishIEMatcher <classngraph_1_1pass_1_1ConvertSwishToSwishIEMatcher.rst>
+	ConvertTensorIteratorToSequence <classngraph_1_1pass_1_1ConvertTensorIteratorToSequence.rst>
+	ConvertTileToLegacyMatcher <classngraph_1_1pass_1_1ConvertTileToLegacyMatcher.rst>
+	ConvertTopK3 <classngraph_1_1pass_1_1ConvertTopK3.rst>
+	ConvertTopKToTopKIEMatcher <classngraph_1_1pass_1_1ConvertTopKToTopKIEMatcher.rst>
+	ConvolutionBackpropDataMultiplyFusion <classngraph_1_1pass_1_1ConvolutionBackpropDataMultiplyFusion.rst>
+	ConvolutionMultiplyFusion <classngraph_1_1pass_1_1ConvolutionMultiplyFusion.rst>
+	DeconvAddFusion <classngraph_1_1pass_1_1DeconvAddFusion.rst>
+	DisableConvertConstantFoldingOnConstPath <classngraph_1_1pass_1_1DisableConvertConstantFoldingOnConstPath.rst>
+	DisableShapeOfConstantFolding <classngraph_1_1pass_1_1DisableShapeOfConstantFolding.rst>
+	FullyConnectedBiasFusion <classngraph_1_1pass_1_1FullyConnectedBiasFusion.rst>
+	FuseFilteringBoxesBySize <classngraph_1_1pass_1_1FuseFilteringBoxesBySize.rst>
+	GenerateMappingFile <classngraph_1_1pass_1_1GenerateMappingFile.rst>
+	GroupConvolutionBackpropDataMultiplyFusion <classngraph_1_1pass_1_1GroupConvolutionBackpropDataMultiplyFusion.rst>
+	GroupConvolutionMultiplyFusion <classngraph_1_1pass_1_1GroupConvolutionMultiplyFusion.rst>
+	MOCTransformations <classngraph_1_1pass_1_1MOCTransformations.rst>
+	MatMulConstTransposesExtraction <classngraph_1_1pass_1_1MatMulConstTransposesExtraction.rst>
+	MultiplyConvolutionBackpropDataFusion <classngraph_1_1pass_1_1MultiplyConvolutionBackpropDataFusion.rst>
+	MultiplyGroupConvolutionBackpropDataFusion <classngraph_1_1pass_1_1MultiplyGroupConvolutionBackpropDataFusion.rst>
+	MultiplyGroupConvolutionFusion <classngraph_1_1pass_1_1MultiplyGroupConvolutionFusion.rst>
+	MultiplyMultiplyFusion <classngraph_1_1pass_1_1MultiplyMultiplyFusion.rst>
+	NopElimination <classngraph_1_1pass_1_1NopElimination.rst>
+	POTTransformations <classngraph_1_1pass_1_1POTTransformations.rst>
+	PadFusion <classngraph_1_1pass_1_1PadFusion.rst>
+	Proposal4Scales <classngraph_1_1pass_1_1Proposal4Scales.rst>
+	PullTransposeThroughFQUp <classngraph_1_1pass_1_1PullTransposeThroughFQUp.rst>
+	RemoveFilteringBoxesBySize <classngraph_1_1pass_1_1RemoveFilteringBoxesBySize.rst>
+	Reshape1DAvgPool <classngraph_1_1pass_1_1Reshape1DAvgPool.rst>
+	Reshape1DConvolution <classngraph_1_1pass_1_1Reshape1DConvolution.rst>
+	Reshape1DMaxPool <classngraph_1_1pass_1_1Reshape1DMaxPool.rst>
+	Reshape1DOps <classngraph_1_1pass_1_1Reshape1DOps.rst>
+	ReshapeBMatMul <classngraph_1_1pass_1_1ReshapeBMatMul.rst>
+	ReshapeFullyConnected <classngraph_1_1pass_1_1ReshapeFullyConnected.rst>
+	ReshapeFullyConnectedFusion <classngraph_1_1pass_1_1ReshapeFullyConnectedFusion.rst>
+	SmartReshape <classngraph_1_1pass_1_1SmartReshape.rst>
+	TransposeMatMul <classngraph_1_1pass_1_1TransposeMatMul.rst>
+	ZeroPointOptimizer <classngraph_1_1pass_1_1ZeroPointOptimizer.rst>
+
+:ref:`ngraph::pass <doxid-namespacengraph_1_1pass>` namespace
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace pass {
+
+	// namespaces
+
+	namespace :ref:`ngraph::pass::itt<doxid-namespacengraph_1_1pass_1_1itt>`;
+		namespace :ref:`ngraph::pass::itt::domains<doxid-namespacengraph_1_1pass_1_1itt_1_1domains>`;
+	namespace :ref:`ngraph::pass::low_precision<doxid-namespacengraph_1_1pass_1_1low__precision>`;
+		namespace :ref:`ngraph::pass::low_precision::itt<doxid-namespacengraph_1_1pass_1_1low__precision_1_1itt>`;
+			namespace :ref:`ngraph::pass::low_precision::itt::domains<doxid-namespacengraph_1_1pass_1_1low__precision_1_1itt_1_1domains>`;
+		namespace :ref:`ngraph::pass::low_precision::precision_set<doxid-namespacengraph_1_1pass_1_1low__precision_1_1precision__set>`;
+
+	// typedefs
+
+	typedef :ref:`ov::pass::ModelPass<doxid-classov_1_1pass_1_1_model_pass>` :target:`FunctionPass<doxid-namespacengraph_1_1pass_1a4858795823a5ac1f8bc1878f44e42281>`;
+	typedef :ref:`ov::EnumMask<doxid-classov_1_1_enum_mask>`<FusionType> :target:`FusionTypeMask<doxid-namespacengraph_1_1pass_1a54d5ef23084c4b4843908946cf8c8b2e>`;
+
+	// classes
+
+	class :ref:`AddAddFusion<doxid-classngraph_1_1pass_1_1_add_add_fusion>`;
+	class :ref:`AddFakeQuantizeFusion<doxid-classngraph_1_1pass_1_1_add_fake_quantize_fusion>`;
+	class :ref:`AddMultiplyFusion<doxid-classngraph_1_1pass_1_1_add_multiply_fusion>`;
+	class :ref:`AlignEltwiseInputRanks<doxid-classngraph_1_1pass_1_1_align_eltwise_input_ranks>`;
+	class :ref:`BatchNormDecomposition<doxid-classngraph_1_1pass_1_1_batch_norm_decomposition>`;
+	class :ref:`BatchToSpaceFusion<doxid-classngraph_1_1pass_1_1_batch_to_space_fusion>`;
+	class :ref:`BidirectionalGRUSequenceDecomposition<doxid-classngraph_1_1pass_1_1_bidirectional_g_r_u_sequence_decomposition>`;
+	class :ref:`BidirectionalLSTMSequenceDecomposition<doxid-classngraph_1_1pass_1_1_bidirectional_l_s_t_m_sequence_decomposition>`;
+	class :ref:`BidirectionalRNNSequenceDecomposition<doxid-classngraph_1_1pass_1_1_bidirectional_r_n_n_sequence_decomposition>`;
+	class :ref:`BidirectionalSequenceDecomposition<doxid-classngraph_1_1pass_1_1_bidirectional_sequence_decomposition>`;
+	class :ref:`BinarizeWeights<doxid-classngraph_1_1pass_1_1_binarize_weights>`;
+	class :ref:`BroadcastConstRangeReplacement<doxid-classngraph_1_1pass_1_1_broadcast_const_range_replacement>`;
+	class :ref:`BroadcastElementwiseFusion<doxid-classngraph_1_1pass_1_1_broadcast_elementwise_fusion>`;
+	class :ref:`ClampFusion<doxid-classngraph_1_1pass_1_1_clamp_fusion>`;
+	class :ref:`CommonOptimizations<doxid-classngraph_1_1pass_1_1_common_optimizations>`;
+	class :ref:`CompressQuantizeWeights<doxid-classngraph_1_1pass_1_1_compress_quantize_weights>`;
+	class :ref:`ConcatReduceFusion<doxid-classngraph_1_1pass_1_1_concat_reduce_fusion>`;
+	class :ref:`ConvAddFusion<doxid-classngraph_1_1pass_1_1_conv_add_fusion>`;
+	class :ref:`ConvFusion<doxid-classngraph_1_1pass_1_1_conv_fusion>`;
+	class :ref:`ConvMultiplyFusion<doxid-classngraph_1_1pass_1_1_conv_multiply_fusion>`;
+	class :ref:`ConvStridesPropagation<doxid-classngraph_1_1pass_1_1_conv_strides_propagation>`;
+	class :ref:`ConvToBinaryConv<doxid-classngraph_1_1pass_1_1_conv_to_binary_conv>`;
+	class :ref:`ConvertBatchToSpace<doxid-classngraph_1_1pass_1_1_convert_batch_to_space>`;
+	class :ref:`ConvertBroadcast3<doxid-classngraph_1_1pass_1_1_convert_broadcast3>`;
+	class :ref:`ConvertBroadcastToTiles<doxid-classngraph_1_1pass_1_1_convert_broadcast_to_tiles>`;
+	class :ref:`ConvertConvolution<doxid-classngraph_1_1pass_1_1_convert_convolution>`;
+	class :ref:`ConvertConvolutions<doxid-classngraph_1_1pass_1_1_convert_convolutions>`;
+	class :ref:`ConvertDeconvolution<doxid-classngraph_1_1pass_1_1_convert_deconvolution>`;
+	class :ref:`ConvertDeformableConv8To1<doxid-classngraph_1_1pass_1_1_convert_deformable_conv8_to1>`;
+	class :ref:`ConvertDepthToSpace<doxid-classngraph_1_1pass_1_1_convert_depth_to_space>`;
+	class :ref:`ConvertDetectionOutput1ToDetectionOutput8<doxid-classngraph_1_1pass_1_1_convert_detection_output1_to_detection_output8>`;
+	class :ref:`ConvertDetectionOutput8ToDetectionOutput1<doxid-classngraph_1_1pass_1_1_convert_detection_output8_to_detection_output1>`;
+	class :ref:`ConvertDivide<doxid-classngraph_1_1pass_1_1_convert_divide>`;
+	class :ref:`ConvertDivideWithConstant<doxid-classngraph_1_1pass_1_1_convert_divide_with_constant>`;
+	class :ref:`ConvertGELU<doxid-classngraph_1_1pass_1_1_convert_g_e_l_u>`;
+	class :ref:`ConvertGRUCellMatcher<doxid-classngraph_1_1pass_1_1_convert_g_r_u_cell_matcher>`;
+	class :ref:`ConvertGRUSequenceMatcher<doxid-classngraph_1_1pass_1_1_convert_g_r_u_sequence_matcher>`;
+	class :ref:`ConvertGRUSequenceToTensorIterator<doxid-classngraph_1_1pass_1_1_convert_g_r_u_sequence_to_tensor_iterator>`;
+	class :ref:`ConvertGather0D<doxid-classngraph_1_1pass_1_1_convert_gather0_d>`;
+	class :ref:`ConvertGather1ToGather7<doxid-classngraph_1_1pass_1_1_convert_gather1_to_gather7>`;
+	class :ref:`ConvertGather7ToGather1<doxid-classngraph_1_1pass_1_1_convert_gather7_to_gather1>`;
+	class :ref:`ConvertGather7ToGather8<doxid-classngraph_1_1pass_1_1_convert_gather7_to_gather8>`;
+	class :ref:`ConvertGather8ToGather7<doxid-classngraph_1_1pass_1_1_convert_gather8_to_gather7>`;
+	class :ref:`ConvertGatherToGatherIEMatcher<doxid-classngraph_1_1pass_1_1_convert_gather_to_gather_i_e_matcher>`;
+	class :ref:`ConvertGatherTreeToGatherTreeIEMatcher<doxid-classngraph_1_1pass_1_1_convert_gather_tree_to_gather_tree_i_e_matcher>`;
+	class :ref:`ConvertGroupConvolution<doxid-classngraph_1_1pass_1_1_convert_group_convolution>`;
+	class :ref:`ConvertGroupDeconvolution<doxid-classngraph_1_1pass_1_1_convert_group_deconvolution>`;
+	class :ref:`ConvertHardSigmoidToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_hard_sigmoid_to_legacy_matcher>`;
+	class :ref:`ConvertInterpolate1ToInterpolate4<doxid-classngraph_1_1pass_1_1_convert_interpolate1_to_interpolate4>`;
+	class :ref:`ConvertInterpolateToInterpOrResampleMatcher<doxid-classngraph_1_1pass_1_1_convert_interpolate_to_interp_or_resample_matcher>`;
+	class :ref:`ConvertLRNToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_l_r_n_to_legacy_matcher>`;
+	class :ref:`ConvertLSTMCellMatcher<doxid-classngraph_1_1pass_1_1_convert_l_s_t_m_cell_matcher>`;
+	class :ref:`ConvertLSTMSequenceMatcher<doxid-classngraph_1_1pass_1_1_convert_l_s_t_m_sequence_matcher>`;
+	class :ref:`ConvertLSTMSequenceToTensorIterator<doxid-classngraph_1_1pass_1_1_convert_l_s_t_m_sequence_to_tensor_iterator>`;
+	class :ref:`ConvertMVN1ToMVN6<doxid-classngraph_1_1pass_1_1_convert_m_v_n1_to_m_v_n6>`;
+	class :ref:`ConvertMatMulToFC<doxid-classngraph_1_1pass_1_1_convert_mat_mul_to_f_c>`;
+	class :ref:`ConvertMatMulToFCorGemm<doxid-classngraph_1_1pass_1_1_convert_mat_mul_to_f_cor_gemm>`;
+	class :ref:`ConvertMatMulToGemm<doxid-classngraph_1_1pass_1_1_convert_mat_mul_to_gemm>`;
+	class :ref:`ConvertMatrixNmsToMatrixNmsIE<doxid-classngraph_1_1pass_1_1_convert_matrix_nms_to_matrix_nms_i_e>`;
+	class :ref:`ConvertMaxPool1ToMaxPool8<doxid-classngraph_1_1pass_1_1_convert_max_pool1_to_max_pool8>`;
+	class :ref:`ConvertMaxPool8ToMaxPool1<doxid-classngraph_1_1pass_1_1_convert_max_pool8_to_max_pool1>`;
+	class :ref:`ConvertMinimum<doxid-classngraph_1_1pass_1_1_convert_minimum>`;
+	class :ref:`ConvertMod<doxid-classngraph_1_1pass_1_1_convert_mod>`;
+	class :ref:`ConvertMulAddToScaleShiftOrPower<doxid-classngraph_1_1pass_1_1_convert_mul_add_to_scale_shift_or_power>`;
+	class :ref:`ConvertMulOrAddFinally<doxid-classngraph_1_1pass_1_1_convert_mul_or_add_finally>`;
+	class :ref:`ConvertMulticlassNmsToMulticlassNmsIE<doxid-classngraph_1_1pass_1_1_convert_multiclass_nms_to_multiclass_nms_i_e>`;
+	class :ref:`ConvertNMS1ToNMS5<doxid-classngraph_1_1pass_1_1_convert_n_m_s1_to_n_m_s5>`;
+	class :ref:`ConvertNMS3ToNMS5<doxid-classngraph_1_1pass_1_1_convert_n_m_s3_to_n_m_s5>`;
+	class :ref:`ConvertNMS4ToNMS5<doxid-classngraph_1_1pass_1_1_convert_n_m_s4_to_n_m_s5>`;
+	class :ref:`ConvertNMS5ToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_n_m_s5_to_legacy_matcher>`;
+	class :ref:`ConvertNMSToNMSIEInternal<doxid-classngraph_1_1pass_1_1_convert_n_m_s_to_n_m_s_i_e_internal>`;
+	class :ref:`ConvertNMSToNMSIEMatcher<doxid-classngraph_1_1pass_1_1_convert_n_m_s_to_n_m_s_i_e_matcher>`;
+	class :ref:`ConvertNegative<doxid-classngraph_1_1pass_1_1_convert_negative>`;
+	class :ref:`ConvertNmsGatherPathToUnsigned<doxid-classngraph_1_1pass_1_1_convert_nms_gather_path_to_unsigned>`;
+	class :ref:`ConvertNormalizeL2ToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_normalize_l2_to_legacy_matcher>`;
+	class :ref:`ConvertNormalizeL2WithMulToNormalizeIE<doxid-classngraph_1_1pass_1_1_convert_normalize_l2_with_mul_to_normalize_i_e>`;
+	class :ref:`ConvertOneHotToOneHotIEMatcher<doxid-classngraph_1_1pass_1_1_convert_one_hot_to_one_hot_i_e_matcher>`;
+	class :ref:`ConvertOpSet1ToLegacy<doxid-classngraph_1_1pass_1_1_convert_op_set1_to_legacy>`;
+	class :ref:`ConvertOpSet2ToOpSet1<doxid-classngraph_1_1pass_1_1_convert_op_set2_to_op_set1>`;
+	class :ref:`ConvertOpSet3ToOpSet2<doxid-classngraph_1_1pass_1_1_convert_op_set3_to_op_set2>`;
+	class :ref:`ConvertPReLUToReLUIE<doxid-classngraph_1_1pass_1_1_convert_p_re_l_u_to_re_l_u_i_e>`;
+	class :ref:`ConvertPadToGroupConvolution<doxid-classngraph_1_1pass_1_1_convert_pad_to_group_convolution>`;
+	class :ref:`ConvertPadToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_pad_to_legacy_matcher>`;
+	class :ref:`ConvertPowerToPowerIEMatcher<doxid-classngraph_1_1pass_1_1_convert_power_to_power_i_e_matcher>`;
+	class :ref:`ConvertPrecision<doxid-classngraph_1_1pass_1_1_convert_precision>`;
+	class :ref:`ConvertPriorBox8To0<doxid-classngraph_1_1pass_1_1_convert_prior_box8_to0>`;
+	class :ref:`ConvertProposal4ToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_proposal4_to_legacy_matcher>`;
+	class :ref:`ConvertProposalToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_proposal_to_legacy_matcher>`;
+	class :ref:`ConvertQuantizeDequantize<doxid-classngraph_1_1pass_1_1_convert_quantize_dequantize>`;
+	class :ref:`ConvertRNNCellMatcher<doxid-classngraph_1_1pass_1_1_convert_r_n_n_cell_matcher>`;
+	class :ref:`ConvertRNNSequenceMatcher<doxid-classngraph_1_1pass_1_1_convert_r_n_n_sequence_matcher>`;
+	class :ref:`ConvertRNNSequenceToTensorIterator<doxid-classngraph_1_1pass_1_1_convert_r_n_n_sequence_to_tensor_iterator>`;
+	class :ref:`ConvertROIAlign3To9<doxid-classngraph_1_1pass_1_1_convert_r_o_i_align3_to9>`;
+	class :ref:`ConvertROIAlign9To3<doxid-classngraph_1_1pass_1_1_convert_r_o_i_align9_to3>`;
+	class :ref:`ConvertReduceMaxToPooling<doxid-classngraph_1_1pass_1_1_convert_reduce_max_to_pooling>`;
+	class :ref:`ConvertReduceMeanToPooling<doxid-classngraph_1_1pass_1_1_convert_reduce_mean_to_pooling>`;
+	class :ref:`ConvertReduceSumToPooling<doxid-classngraph_1_1pass_1_1_convert_reduce_sum_to_pooling>`;
+	class :ref:`ConvertReduceToPooling<doxid-classngraph_1_1pass_1_1_convert_reduce_to_pooling>`;
+	class :ref:`ConvertScatterElementsToScatter<doxid-classngraph_1_1pass_1_1_convert_scatter_elements_to_scatter>`;
+	class :ref:`ConvertSeluToSeluIEMatcher<doxid-classngraph_1_1pass_1_1_convert_selu_to_selu_i_e_matcher>`;
+	class :ref:`ConvertSequenceToTensorIterator<doxid-classngraph_1_1pass_1_1_convert_sequence_to_tensor_iterator>`;
+	class :ref:`ConvertShapeOf3<doxid-classngraph_1_1pass_1_1_convert_shape_of3>`;
+	class :ref:`ConvertShuffleChannels3<doxid-classngraph_1_1pass_1_1_convert_shuffle_channels3>`;
+	class :ref:`ConvertSoftMax1ToSoftMax8<doxid-classngraph_1_1pass_1_1_convert_soft_max1_to_soft_max8>`;
+	class :ref:`ConvertSoftMax8ToSoftMax1<doxid-classngraph_1_1pass_1_1_convert_soft_max8_to_soft_max1>`;
+	class :ref:`ConvertSpaceToBatch<doxid-classngraph_1_1pass_1_1_convert_space_to_batch>`;
+	class :ref:`ConvertSpaceToDepth<doxid-classngraph_1_1pass_1_1_convert_space_to_depth>`;
+	class :ref:`ConvertSqrtToPowerIEMatcher<doxid-classngraph_1_1pass_1_1_convert_sqrt_to_power_i_e_matcher>`;
+	class :ref:`ConvertStridedSliceToCropMatcher<doxid-classngraph_1_1pass_1_1_convert_strided_slice_to_crop_matcher>`;
+	class :ref:`ConvertSubtract<doxid-classngraph_1_1pass_1_1_convert_subtract>`;
+	class :ref:`ConvertSwishToSwishIEMatcher<doxid-classngraph_1_1pass_1_1_convert_swish_to_swish_i_e_matcher>`;
+	class :ref:`ConvertTensorIteratorToGRUSequence<doxid-classngraph_1_1pass_1_1_convert_tensor_iterator_to_g_r_u_sequence>`;
+	class :ref:`ConvertTensorIteratorToLSTMSequence<doxid-classngraph_1_1pass_1_1_convert_tensor_iterator_to_l_s_t_m_sequence>`;
+	class :ref:`ConvertTensorIteratorToRNNSequence<doxid-classngraph_1_1pass_1_1_convert_tensor_iterator_to_r_n_n_sequence>`;
+	class :ref:`ConvertTensorIteratorToSequence<doxid-classngraph_1_1pass_1_1_convert_tensor_iterator_to_sequence>`;
+	class :ref:`ConvertTileToLegacyMatcher<doxid-classngraph_1_1pass_1_1_convert_tile_to_legacy_matcher>`;
+	class :ref:`ConvertTopK3<doxid-classngraph_1_1pass_1_1_convert_top_k3>`;
+	class :ref:`ConvertTopKToTopKIEMatcher<doxid-classngraph_1_1pass_1_1_convert_top_k_to_top_k_i_e_matcher>`;
+	class :ref:`ConvolutionBackpropDataMultiplyFusion<doxid-classngraph_1_1pass_1_1_convolution_backprop_data_multiply_fusion>`;
+	class :ref:`ConvolutionMultiplyFusion<doxid-classngraph_1_1pass_1_1_convolution_multiply_fusion>`;
+	class :ref:`DeconvAddFusion<doxid-classngraph_1_1pass_1_1_deconv_add_fusion>`;
+	class :ref:`DepthToSpaceFusion<doxid-classngraph_1_1pass_1_1_depth_to_space_fusion>`;
+	class :ref:`DilatedConvolutionConverter<doxid-classngraph_1_1pass_1_1_dilated_convolution_converter>`;
+	class :ref:`DisableConvertConstantFoldingOnConstPath<doxid-classngraph_1_1pass_1_1_disable_convert_constant_folding_on_const_path>`;
+	class :ref:`DisableRandomUniformConstantFolding<doxid-classngraph_1_1pass_1_1_disable_random_uniform_constant_folding>`;
+	class :ref:`DisableShapeOfConstantFolding<doxid-classngraph_1_1pass_1_1_disable_shape_of_constant_folding>`;
+	class :ref:`DivideFusion<doxid-classngraph_1_1pass_1_1_divide_fusion>`;
+	class :ref:`DropoutWithRandomUniformReplacer<doxid-classngraph_1_1pass_1_1_dropout_with_random_uniform_replacer>`;
+	class :ref:`EinsumDecomposition<doxid-classngraph_1_1pass_1_1_einsum_decomposition>`;
+	class :ref:`EliminateConcat<doxid-classngraph_1_1pass_1_1_eliminate_concat>`;
+	class :ref:`EliminateConvert<doxid-classngraph_1_1pass_1_1_eliminate_convert>`;
+	class :ref:`EliminateConvertNonZero<doxid-classngraph_1_1pass_1_1_eliminate_convert_non_zero>`;
+	class :ref:`EliminateEltwise<doxid-classngraph_1_1pass_1_1_eliminate_eltwise>`;
+	class :ref:`EliminateGatherUnsqueeze<doxid-classngraph_1_1pass_1_1_eliminate_gather_unsqueeze>`;
+	class :ref:`EliminatePad<doxid-classngraph_1_1pass_1_1_eliminate_pad>`;
+	class :ref:`EliminateSplit<doxid-classngraph_1_1pass_1_1_eliminate_split>`;
+	class :ref:`EliminateSqueeze<doxid-classngraph_1_1pass_1_1_eliminate_squeeze>`;
+	class :ref:`EliminateTranspose<doxid-classngraph_1_1pass_1_1_eliminate_transpose>`;
+	class :ref:`EliminateUnsqueezeGather<doxid-classngraph_1_1pass_1_1_eliminate_unsqueeze_gather>`;
+	class :ref:`FakeQuantizeDecomposition<doxid-classngraph_1_1pass_1_1_fake_quantize_decomposition>`;
+	class :ref:`FakeQuantizeMulFusion<doxid-classngraph_1_1pass_1_1_fake_quantize_mul_fusion>`;
+	class :ref:`FakeQuantizeReshapeFusion<doxid-classngraph_1_1pass_1_1_fake_quantize_reshape_fusion>`;
+	class :ref:`FixRtInfo<doxid-classngraph_1_1pass_1_1_fix_rt_info>`;
+	class :ref:`FullyConnectedBiasFusion<doxid-classngraph_1_1pass_1_1_fully_connected_bias_fusion>`;
+	class :ref:`FuseFilteringBoxesBySize<doxid-classngraph_1_1pass_1_1_fuse_filtering_boxes_by_size>`;
+	class :ref:`GRUCellDecomposition<doxid-classngraph_1_1pass_1_1_g_r_u_cell_decomposition>`;
+	class :ref:`GatherNegativeConstIndicesNormalize<doxid-classngraph_1_1pass_1_1_gather_negative_const_indices_normalize>`;
+	class :ref:`GatherNopElimination<doxid-classngraph_1_1pass_1_1_gather_nop_elimination>`;
+	class :ref:`Gelu7Downgrade<doxid-classngraph_1_1pass_1_1_gelu7_downgrade>`;
+	class :ref:`GeluFusion<doxid-classngraph_1_1pass_1_1_gelu_fusion>`;
+	class :ref:`GeluFusionWithErfOne<doxid-classngraph_1_1pass_1_1_gelu_fusion_with_erf_one>`;
+	class :ref:`GeluFusionWithErfThree<doxid-classngraph_1_1pass_1_1_gelu_fusion_with_erf_three>`;
+	class :ref:`GeluFusionWithErfTwo<doxid-classngraph_1_1pass_1_1_gelu_fusion_with_erf_two>`;
+	class :ref:`GenerateMappingFile<doxid-classngraph_1_1pass_1_1_generate_mapping_file>`;
+	class :ref:`GroupConvolutionBackpropDataMultiplyFusion<doxid-classngraph_1_1pass_1_1_group_convolution_backprop_data_multiply_fusion>`;
+	class :ref:`GroupConvolutionMultiplyFusion<doxid-classngraph_1_1pass_1_1_group_convolution_multiply_fusion>`;
+	class :ref:`GroupedGatherElimination<doxid-classngraph_1_1pass_1_1_grouped_gather_elimination>`;
+	class :ref:`GroupedStridedSliceOptimizer<doxid-classngraph_1_1pass_1_1_grouped_strided_slice_optimizer>`;
+	class :ref:`HSigmoidDecomposition<doxid-classngraph_1_1pass_1_1_h_sigmoid_decomposition>`;
+	class :ref:`HSigmoidFusion<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion>`;
+	class :ref:`HSigmoidFusionWithClampDiv<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion_with_clamp_div>`;
+	class :ref:`HSigmoidFusionWithClampMul<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion_with_clamp_mul>`;
+	class :ref:`HSigmoidFusionWithReluDiv<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion_with_relu_div>`;
+	class :ref:`HSigmoidFusionWithReluMul<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion_with_relu_mul>`;
+	class :ref:`HSigmoidFusionWithoutRelu<doxid-classngraph_1_1pass_1_1_h_sigmoid_fusion_without_relu>`;
+	class :ref:`HSwishDecomposition<doxid-classngraph_1_1pass_1_1_h_swish_decomposition>`;
+	class :ref:`HSwishFusion<doxid-classngraph_1_1pass_1_1_h_swish_fusion>`;
+	class :ref:`HSwishFusionWithClamp<doxid-classngraph_1_1pass_1_1_h_swish_fusion_with_clamp>`;
+	class :ref:`HSwishFusionWithHSigmoid<doxid-classngraph_1_1pass_1_1_h_swish_fusion_with_h_sigmoid>`;
+	class :ref:`HSwishFusionWithReluDiv<doxid-classngraph_1_1pass_1_1_h_swish_fusion_with_relu_div>`;
+	class :ref:`HSwishFusionWithReluMul<doxid-classngraph_1_1pass_1_1_h_swish_fusion_with_relu_mul>`;
+	class :ref:`InitConstMask<doxid-classngraph_1_1pass_1_1_init_const_mask>`;
+	class :ref:`InitMasks<doxid-classngraph_1_1pass_1_1_init_masks>`;
+	class :ref:`InitNodeInfo<doxid-classngraph_1_1pass_1_1_init_node_info>`;
+	class :ref:`InterpolateSequenceFusion<doxid-classngraph_1_1pass_1_1_interpolate_sequence_fusion>`;
+	class :ref:`LSTMCellDecomposition<doxid-classngraph_1_1pass_1_1_l_s_t_m_cell_decomposition>`;
+	class :ref:`LeakyReluFusion<doxid-classngraph_1_1pass_1_1_leaky_relu_fusion>`;
+	class :ref:`LinOpSequenceFusion<doxid-classngraph_1_1pass_1_1_lin_op_sequence_fusion>`;
+	class :ref:`LogSoftmaxDecomposition<doxid-classngraph_1_1pass_1_1_log_softmax_decomposition>`;
+	class :ref:`MOCTransformations<doxid-classngraph_1_1pass_1_1_m_o_c_transformations>`;
+	class :ref:`MVN6Decomposition<doxid-classngraph_1_1pass_1_1_m_v_n6_decomposition>`;
+	class :ref:`MVNFusion<doxid-classngraph_1_1pass_1_1_m_v_n_fusion>`;
+	class :ref:`MVNFusionWithConstantsInside<doxid-classngraph_1_1pass_1_1_m_v_n_fusion_with_constants_inside>`;
+	class :ref:`MVNFusionWithoutConstants<doxid-classngraph_1_1pass_1_1_m_v_n_fusion_without_constants>`;
+	class :ref:`MatMulConstTransposesExtraction<doxid-classngraph_1_1pass_1_1_mat_mul_const_transposes_extraction>`;
+	class :ref:`MatMulMultiplyFusion<doxid-classngraph_1_1pass_1_1_mat_mul_multiply_fusion>`;
+	class :ref:`MimicSetBatchSize<doxid-classngraph_1_1pass_1_1_mimic_set_batch_size>`;
+	class :ref:`MishFusion<doxid-classngraph_1_1pass_1_1_mish_fusion>`;
+	class :ref:`MulFakeQuantizeFusion<doxid-classngraph_1_1pass_1_1_mul_fake_quantize_fusion>`;
+	class :ref:`MultiplyConvolutionBackpropDataFusion<doxid-classngraph_1_1pass_1_1_multiply_convolution_backprop_data_fusion>`;
+	class :ref:`MultiplyConvolutionFusion<doxid-classngraph_1_1pass_1_1_multiply_convolution_fusion>`;
+	class :ref:`MultiplyGroupConvolutionBackpropDataFusion<doxid-classngraph_1_1pass_1_1_multiply_group_convolution_backprop_data_fusion>`;
+	class :ref:`MultiplyGroupConvolutionFusion<doxid-classngraph_1_1pass_1_1_multiply_group_convolution_fusion>`;
+	class :ref:`MultiplyMultiplyFusion<doxid-classngraph_1_1pass_1_1_multiply_multiply_fusion>`;
+	class :ref:`NearestNeighborUpsamplingFusion<doxid-classngraph_1_1pass_1_1_nearest_neighbor_upsampling_fusion>`;
+	class :ref:`NopElimination<doxid-classngraph_1_1pass_1_1_nop_elimination>`;
+	class :ref:`NormalizeL2Decomposition<doxid-classngraph_1_1pass_1_1_normalize_l2_decomposition>`;
+	class :ref:`NormalizeL2Fusion<doxid-classngraph_1_1pass_1_1_normalize_l2_fusion>`;
+	class :ref:`POTTransformations<doxid-classngraph_1_1pass_1_1_p_o_t_transformations>`;
+	class :ref:`PReluFusion<doxid-classngraph_1_1pass_1_1_p_relu_fusion>`;
+	class :ref:`PReluFusionMultiplyAdd<doxid-classngraph_1_1pass_1_1_p_relu_fusion_multiply_add>`;
+	class :ref:`PReluFusionMultiplySub<doxid-classngraph_1_1pass_1_1_p_relu_fusion_multiply_sub>`;
+	class :ref:`PReluFusionNegativeAdd<doxid-classngraph_1_1pass_1_1_p_relu_fusion_negative_add>`;
+	class :ref:`PReluFusionNegativeSub<doxid-classngraph_1_1pass_1_1_p_relu_fusion_negative_sub>`;
+	class :ref:`PadFusion<doxid-classngraph_1_1pass_1_1_pad_fusion>`;
+	class :ref:`PadFusionAvgPool<doxid-classngraph_1_1pass_1_1_pad_fusion_avg_pool>`;
+	class :ref:`PadFusionConvolution<doxid-classngraph_1_1pass_1_1_pad_fusion_convolution>`;
+	class :ref:`PadFusionConvolutionBackpropData<doxid-classngraph_1_1pass_1_1_pad_fusion_convolution_backprop_data>`;
+	class :ref:`PadFusionGroupConvolution<doxid-classngraph_1_1pass_1_1_pad_fusion_group_convolution>`;
+	class :ref:`PadFusionGroupConvolutionBackpropData<doxid-classngraph_1_1pass_1_1_pad_fusion_group_convolution_backprop_data>`;
+	class :ref:`PropagateMasks<doxid-classngraph_1_1pass_1_1_propagate_masks>`;
+	class :ref:`Proposal1Scales<doxid-classngraph_1_1pass_1_1_proposal1_scales>`;
+	class :ref:`Proposal4Scales<doxid-classngraph_1_1pass_1_1_proposal4_scales>`;
+	class :ref:`Pruning<doxid-classngraph_1_1pass_1_1_pruning>`;
+	class :ref:`PullSqueezeThroughEltwise<doxid-classngraph_1_1pass_1_1_pull_squeeze_through_eltwise>`;
+	class :ref:`PullTransposeThroughFQUp<doxid-classngraph_1_1pass_1_1_pull_transpose_through_f_q_up>`;
+	class :ref:`RNNCellDecomposition<doxid-classngraph_1_1pass_1_1_r_n_n_cell_decomposition>`;
+	class :ref:`RandomUniformFusion<doxid-classngraph_1_1pass_1_1_random_uniform_fusion>`;
+	class :ref:`ReduceL1Decomposition<doxid-classngraph_1_1pass_1_1_reduce_l1_decomposition>`;
+	class :ref:`ReduceL2Decomposition<doxid-classngraph_1_1pass_1_1_reduce_l2_decomposition>`;
+	class :ref:`ReluFakeQuantizeFusion<doxid-classngraph_1_1pass_1_1_relu_fake_quantize_fusion>`;
+	class :ref:`RemoveFilteringBoxesBySize<doxid-classngraph_1_1pass_1_1_remove_filtering_boxes_by_size>`;
+	class :ref:`ReplaceConcatReduceByMinOrMax<doxid-classngraph_1_1pass_1_1_replace_concat_reduce_by_min_or_max>`;
+	class :ref:`Reshape1DAvgPool<doxid-classngraph_1_1pass_1_1_reshape1_d_avg_pool>`;
+	class :ref:`Reshape1DConvolution<doxid-classngraph_1_1pass_1_1_reshape1_d_convolution>`;
+	class :ref:`Reshape1DMaxPool<doxid-classngraph_1_1pass_1_1_reshape1_d_max_pool>`;
+	class :ref:`Reshape1DOps<doxid-classngraph_1_1pass_1_1_reshape1_d_ops>`;
+	class :ref:`ReshapeAMatMul<doxid-classngraph_1_1pass_1_1_reshape_a_mat_mul>`;
+	class :ref:`ReshapeBMatMul<doxid-classngraph_1_1pass_1_1_reshape_b_mat_mul>`;
+	class :ref:`ReshapeFullyConnected<doxid-classngraph_1_1pass_1_1_reshape_fully_connected>`;
+	class :ref:`ReshapeFullyConnectedFusion<doxid-classngraph_1_1pass_1_1_reshape_fully_connected_fusion>`;
+	class :ref:`ReshapeSequenceFusion<doxid-classngraph_1_1pass_1_1_reshape_sequence_fusion>`;
+	class :ref:`ReshapeTo1D<doxid-classngraph_1_1pass_1_1_reshape_to1_d>`;
+	class :ref:`ReverseInputChannelsFusion<doxid-classngraph_1_1pass_1_1_reverse_input_channels_fusion>`;
+	class :ref:`SetBatchSize<doxid-classngraph_1_1pass_1_1_set_batch_size>`;
+	class :ref:`SharedShapeOf<doxid-classngraph_1_1pass_1_1_shared_shape_of>`;
+	class :ref:`SharedSqueeze<doxid-classngraph_1_1pass_1_1_shared_squeeze>`;
+	class :ref:`SharedStridedSliceEraser<doxid-classngraph_1_1pass_1_1_shared_strided_slice_eraser>`;
+	class :ref:`ShrinkWeights<doxid-classngraph_1_1pass_1_1_shrink_weights>`;
+	class :ref:`ShuffleChannelsFusion<doxid-classngraph_1_1pass_1_1_shuffle_channels_fusion>`;
+	class :ref:`SkipGatherBeforeTransposeAndReshape<doxid-classngraph_1_1pass_1_1_skip_gather_before_transpose_and_reshape>`;
+	class :ref:`SliceToStridedSlice<doxid-classngraph_1_1pass_1_1_slice_to_strided_slice>`;
+	class :ref:`SmartReshape<doxid-classngraph_1_1pass_1_1_smart_reshape>`;
+	class :ref:`SoftPlusDecomposition<doxid-classngraph_1_1pass_1_1_soft_plus_decomposition>`;
+	class :ref:`SoftPlusFusion<doxid-classngraph_1_1pass_1_1_soft_plus_fusion>`;
+	class :ref:`SoftPlusToMishFusion<doxid-classngraph_1_1pass_1_1_soft_plus_to_mish_fusion>`;
+	class :ref:`SoftmaxDecomposition<doxid-classngraph_1_1pass_1_1_softmax_decomposition>`;
+	class :ref:`SoftmaxFusion<doxid-classngraph_1_1pass_1_1_softmax_fusion>`;
+	class :ref:`SpaceToBatchFusion<doxid-classngraph_1_1pass_1_1_space_to_batch_fusion>`;
+	class :ref:`SplitConcatPairToInterpolateFusion<doxid-classngraph_1_1pass_1_1_split_concat_pair_to_interpolate_fusion>`;
+	class :ref:`SplitSqueezeConcatFusion<doxid-classngraph_1_1pass_1_1_split_squeeze_concat_fusion>`;
+	class :ref:`SqueezeStridedSlice<doxid-classngraph_1_1pass_1_1_squeeze_strided_slice>`;
+	class :ref:`StridedSliceOptimization<doxid-classngraph_1_1pass_1_1_strided_slice_optimization>`;
+	class :ref:`StridedSliceSqueeze<doxid-classngraph_1_1pass_1_1_strided_slice_squeeze>`;
+	class :ref:`StridesOptimization<doxid-classngraph_1_1pass_1_1_strides_optimization>`;
+	class :ref:`SubtractFusion<doxid-classngraph_1_1pass_1_1_subtract_fusion>`;
+	class :ref:`SupportedNodesStridesPropagation<doxid-classngraph_1_1pass_1_1_supported_nodes_strides_propagation>`;
+	class :ref:`SwishFusion<doxid-classngraph_1_1pass_1_1_swish_fusion>`;
+	class :ref:`SwishFusionWithBeta<doxid-classngraph_1_1pass_1_1_swish_fusion_with_beta>`;
+	class :ref:`SwishFusionWithSigmoid<doxid-classngraph_1_1pass_1_1_swish_fusion_with_sigmoid>`;
+	class :ref:`SwishFusionWithSigmoidWithBeta<doxid-classngraph_1_1pass_1_1_swish_fusion_with_sigmoid_with_beta>`;
+	class :ref:`SwishFusionWithoutBeta<doxid-classngraph_1_1pass_1_1_swish_fusion_without_beta>`;
+	class :ref:`TransposeConvert<doxid-classngraph_1_1pass_1_1_transpose_convert>`;
+	class :ref:`TransposeEltwise<doxid-classngraph_1_1pass_1_1_transpose_eltwise>`;
+	class :ref:`TransposeFQReduction<doxid-classngraph_1_1pass_1_1_transpose_f_q_reduction>`;
+	class :ref:`TransposeFuse<doxid-classngraph_1_1pass_1_1_transpose_fuse>`;
+	class :ref:`TransposeMatMul<doxid-classngraph_1_1pass_1_1_transpose_mat_mul>`;
+	class :ref:`TransposeReduction<doxid-classngraph_1_1pass_1_1_transpose_reduction>`;
+	class :ref:`TransposeReshapeEliminationForMatmul<doxid-classngraph_1_1pass_1_1_transpose_reshape_elimination_for_matmul>`;
+	class :ref:`TransposeSinking<doxid-classngraph_1_1pass_1_1_transpose_sinking>`;
+	class :ref:`TransposeToReshape<doxid-classngraph_1_1pass_1_1_transpose_to_reshape>`;
+	class :ref:`UnrollIf<doxid-classngraph_1_1pass_1_1_unroll_if>`;
+	class :ref:`UnrollTensorIterator<doxid-classngraph_1_1pass_1_1_unroll_tensor_iterator>`;
+	class :ref:`UnsupportedNodesStridesPropagation<doxid-classngraph_1_1pass_1_1_unsupported_nodes_strides_propagation>`;
+	class :ref:`UselessStridedSliceEraser<doxid-classngraph_1_1pass_1_1_useless_strided_slice_eraser>`;
+	class :ref:`WeightsDequantizeToFakeQuantize<doxid-classngraph_1_1pass_1_1_weights_dequantize_to_fake_quantize>`;
+	class :ref:`WrapInterpolateIntoTransposes<doxid-classngraph_1_1pass_1_1_wrap_interpolate_into_transposes>`;
+	class :ref:`ZeroPointOptimizer<doxid-classngraph_1_1pass_1_1_zero_point_optimizer>`;
+
+	// global variables
+
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`ConvertPrecision<doxid-namespacengraph_1_1pass_1a2b580c758ade4ad20138848220b25906>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`FixRtInfo<doxid-namespacengraph_1_1pass_1a591404ce2ba63b90f561f305b5865441>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`InitNodeInfo<doxid-namespacengraph_1_1pass_1a44bfc1098aca94584ab4d6cf88ad6d29>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`ReshapeAMatMul<doxid-namespacengraph_1_1pass_1aed9197f288c1fe97f29b1c9394c4b9c4>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`ReshapeBMatMul<doxid-namespacengraph_1_1pass_1a02e1ead9979385f0bcad54171727c3ba>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`TransposeMatMul<doxid-namespacengraph_1_1pass_1abd5d30082a6cfba5a2a77451c91c3423>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`MimicSetBatchSize<doxid-namespacengraph_1_1pass_1a47937010006435792f4b06933eff70c6>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`Proposal1Scales<doxid-namespacengraph_1_1pass_1a9300c588d6c456cc3b00fc61e3dc007e>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`Proposal4Scales<doxid-namespacengraph_1_1pass_1a79cebbb9872d8eae67b12719a231d704>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`ReshapeTo1D<doxid-namespacengraph_1_1pass_1a38c0fde5152b5438ffecdd2b08960613>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`SetBatchSize<doxid-namespacengraph_1_1pass_1aa72c9850d9804c60f49cea7299e14dca>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`SmartReshape<doxid-namespacengraph_1_1pass_1a82acdf7069d2a7c52117bd888ad26c7f>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`StridedSliceSqueeze<doxid-namespacengraph_1_1pass_1a465dfdb3ce6aac1920b44609d58badc3>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`SqueezeStridedSlice<doxid-namespacengraph_1_1pass_1a5f07a9f88675fc37c0b810e4b803ab54>`;
+	class :ref:`NGRAPH_API<doxid-ngraph__visibility_8hpp_1a20191679dd9789fbe0f132b3a7e4cee3>` :target:`SharedSqueeze<doxid-namespacengraph_1_1pass_1ae7d01ca828093d625ab56abe1fa3f87e>`;
+	const PassPropertyMask :target:`all_pass_property_off<doxid-namespacengraph_1_1pass_1a336d251ad017bcf1a5fa0f230ff16944>`;
+
+	} // namespace pass
