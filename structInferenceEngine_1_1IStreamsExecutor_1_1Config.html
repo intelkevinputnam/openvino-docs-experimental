@@ -1,0 +1,4505 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>struct InferenceEngine::IStreamsExecutor::Config &#8212; OpenVINO™  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="canonical" href="https://docs.openvino.ai/latest/structInferenceEngine_1_1IStreamsExecutor_1_1Config.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="enum InferenceEngine::IStreamsExecutor::Config::PreferredCoreType" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html" />
+    <link rel="prev" title="enum InferenceEngine::IStreamsExecutor::ThreadBindingType" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">OpenVINO™  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="get_started.html">
+   Get Started
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_install_guides_install_runtime.html">
+     Install OpenVINO Runtime
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_linux_header.html">
+       Install on Linux
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_linux.html">
+         Using Installer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_pip.html">
+         From PyPI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_apt.html">
+         From APT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_yum.html">
+         From YUM
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_conda.html">
+         From Anaconda Cloud
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_docker_linux.html">
+         Using Docker
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_windows_header.html">
+       Install on Windows
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_windows.html">
+         Using Installer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_pip.html">
+         From PyPI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_conda.html">
+         From Anaconda Cloud
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_docker_windows.html">
+         Using Docker
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_macos_header.html">
+       Install on macOS
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+      <label for="toctree-checkbox-5">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_macos.html">
+         Using Installer
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_pip.html">
+         From PyPI
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_conda.html">
+         From Anaconda Cloud
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_raspbian.html">
+       Install on Raspbian OS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_install_dev_tools.html">
+     Install OpenVINO Development Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://github.com/openvinotoolkit/openvino/wiki/BuildingCode">
+     Build from Source
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_yocto.html">
+     Create a Yocto Image
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_uninstalling_openvino.html">
+     Uninstalling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_configurations_for_intel_gpu.html">
+     Configurations for GPU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_configurations_for_ncs2.html">
+     Configurations for NCS2
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_install_guides_installing_openvino_ivad_vpu.html">
+     Configurations for VPU
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_install_guides_movidius_setup_guide.html">
+       Configurations for IEI Mustang-V100-MX8-R10 card
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_install_guides_configurations_for_intel_gna.html">
+     Configurations for GNA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_get_started_get_started_demos.html">
+     Get Started with Step-by-step Demo
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="tutorials.html">
+     Get Started with Tutorials
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_OV_UG_Samples_Overview.html">
+     OpenVINO Samples
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_classification_sample_async_README.html">
+       Image Classification Async C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_classification_sample_async_README.html">
+       Image Classification Async Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_hello_classification_README.html">
+       Hello Classification C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_c_samples_hello_classification_README.html">
+       Hello Classification C Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_hello_classification_README.html">
+       Hello Classification Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_hello_reshape_ssd_README.html">
+       Hello Reshape SSD C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_hello_reshape_ssd_README.html">
+       Hello Reshape SSD Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_hello_nv12_input_classification_README.html">
+       Hello NV12 Input Classification C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_c_samples_hello_nv12_input_classification_README.html">
+       Hello NV12 Input Classification C Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_hello_query_device_README.html">
+       Hello Query Device C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_hello_query_device_README.html">
+       Hello Query Device Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_model_creation_sample_README.html">
+       Model Creation C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_model_creation_sample_README.html">
+       Model Creation Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_speech_sample_README.html">
+       Automatic Speech Recognition C++ Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_ie_bridges_python_sample_speech_sample_README.html">
+       Automatic Speech Recognition Python* Sample
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_samples_benchmark_app_README.html">
+       Benchmark C++ Tool
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_tools_benchmark_tool_README.html">
+       Benchmark Python* Tool
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_get_started_guide_troubleshooting.html">
+     Installation &amp; Configuration Issues
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="documentation.html">
+   Documentation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html">
+     Convert model with Model Optimizer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Converting_Model.html">
+       Setting Input Shapes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Cutting_Model.html">
+       Cutting Off Parts of a Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_Additional_Optimization_Use_Cases.html">
+       Embedding Preprocessing Computation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_FP16_Compression.html">
+       Compression of a Model to FP16
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html">
+       Converting a TensorFlow Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_ONNX.html">
+       Converting an ONNX Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_PyTorch.html">
+       Converting a PyTorch* Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_Paddle.html">
+       Converting a PaddlePaddle* Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_MxNet.html">
+       Converting an MXNet* Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_Caffe.html">
+       Converting a Caffe* Model
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_Kaldi.html">
+       Converting a Kaldi* Model
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tutorials.html">
+       Model Conversion Tutorials
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_AttentionOCR_From_Tensorflow.html">
+         Convert TensorFlow Attention OCR Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_BERT_From_Tensorflow.html">
+         Convert TensorFlow BERT Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_CRNN_From_Tensorflow.html">
+         Convert TensorFlow CRNN Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_DeepSpeech_From_Tensorflow.html">
+         Convert TensorFlow DeepSpeech Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_EfficientDet_Models.html">
+         Convert TensorFlow EfficientDet Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_FaceNet_From_Tensorflow.html">
+         Convert TensorFlow FaceNet Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_GNMT_From_Tensorflow.html">
+         Convert TensorFlow GNMT Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_lm_1b_From_Tensorflow.html">
+         Convert TensorFlow Language Model on One Billion Word Benchmark
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_NCF_From_Tensorflow.html">
+         Convert TensorFlow Neural Collaborative Filtering Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_Object_Detection_API_Models.html">
+         Convert TensorFlow Object Detection API Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_RetinaNet_From_Tensorflow.html">
+         Converting TensorFlow RetinaNet Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_Slim_Library_Models.html">
+         Convert TensorFlow Slim Image Classification Model Library Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_WideAndDeep_Family_Models.html">
+         Convert TensorFlow Wide and Deep Family Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_XLNet_From_Tensorflow.html">
+         Convert TensorFlow XLNet Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_tf_specific_Convert_YOLO_From_Tensorflow.html">
+         Convert TensorFlow YOLO Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_onnx_specific_Convert_Faster_RCNN.html">
+         Convert ONNX* Faster R-CNN Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_onnx_specific_Convert_GPT2.html">
+         Convert ONNX* GPT-2 Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_onnx_specific_Convert_Mask_RCNN.html">
+         Convert ONNX* Mask R-CNN Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_Bert_ner.html">
+         Convert PyTorch* BERT-NER Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_Cascade_RCNN_res101.html">
+         Convert PyTorch Cascade RCNN R-101 Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_F3Net.html">
+         Convert PyTorch* F3Net Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_QuartzNet.html">
+         Convert PyTorch* QuartzNet Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_RCAN.html">
+         Convert PyTorch* RCAN Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_RNNT.html">
+         Convert PyTorch* RNN-T Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_pytorch_specific_Convert_YOLACT.html">
+         Convert PyTorch* YOLACT Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_mxnet_specific_Convert_GluonCV_Models.html">
+         Convert MXNet GluonCV* Models
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_mxnet_specific_Convert_Style_Transfer_From_MXNet.html">
+         Convert MXNet Style Transfer Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_kaldi_specific_Aspire_Tdnn_Model.html">
+         Convert Kaldi* ASpIRE Chain Time Delay Neural Network (TDNN) Model
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_Model_Optimizer_FAQ.html">
+       Model Optimizer Frequently Asked Questions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_OV_UG_OV_Runtime_User_Guide.html">
+     Performing inference with OpenVINO Runtime
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_OV_UG_Integrate_OV_with_your_application.html">
+       Integrate OpenVINO™ with Your Application
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Model_Representation.html">
+         Model Representation in OpenVINO™ Runtime
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Infer_request.html">
+         OpenVINO™ Inference Request
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Python_API_exclusives.html">
+         OpenVINO™ Python API exclusives
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_ShapeInference.html">
+       Changing input shapes
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_OV_UG_Working_with_devices.html">
+       Working with devices
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_query_api.html">
+         Query device properties, configuration
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_CPU.html">
+         CPU device
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_GPU.html">
+         GPU device
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_VPU.html">
+         VPU devices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_GNA.html">
+         GNA device
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_ARM_CPU.html">
+         Arm® CPU device
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_OV_UG_Preprocessing_Overview.html">
+       Optimize Preprocessing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Preprocessing_Details.html">
+         Preprocessing API - details
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Layout_Overview.html">
+         Layout API overview
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Preprocess_Usecase_save.html">
+         Use Case - Integrate and Save Preprocessing Steps Into IR
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_OV_UG_DynamicShapes.html">
+       Dynamic Shapes
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+      <label for="toctree-checkbox-16">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_NoDynamicShapes.html">
+         When Dynamic Shapes API is Not Applicable
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_AUTO.html">
+       Automatic device selection
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_AUTO_debugging.html">
+         Debugging Auto-Device Plugin
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_Running_on_multiple_devices.html">
+       Running on multiple devices simultaneously
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_Hetero_execution.html">
+       Heterogeneous execution
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_Performance_Hints.html">
+       High-level Performance Hints
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_Automatic_Batching.html">
+       Automatic Batching
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_OV_UG_network_state_intro.html">
+       Stateful models
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_2_0_transition_guide.html">
+     Transition to OpenVINO™ API 2.0
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_2_0_deployment.html">
+       Installation &amp; Deployment
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_2_0_inference_pipeline.html">
+       Inference Pipeline
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_2_0_configure_devices.html">
+       Configuring Devices
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_2_0_preprocessing.html">
+       Preprocessing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_2_0_model_creation.html">
+       Model Creation in Runtime
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_deployment_guide.html">
+     Deploy with OpenVINO
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+    <label for="toctree-checkbox-19">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_install_guides_deployment_manager_tool.html">
+       Deployment Manager
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_deploy_local_distribution.html">
+       Local distribution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_inference_engine_tools_compile_tool_README.html">
+     Compile Tool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_optimization_guide_dldt_optimization_guide.html">
+     Introduction to Performance Optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_MO_DG_Getting_Performance_Numbers.html">
+     Getting Performance Numbers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_model_optimization_guide.html">
+     Model Optimization Guide
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="pot_introduction.html">
+       Optimizing models post-training
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+      <label for="toctree-checkbox-21">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_default_quantization_usage.html">
+         Quantizing Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_accuracyaware_usage.html">
+         Quantizing Model with Accuracy Control
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_docs_BestPractices.html">
+         Quantization Best Practices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_compression_api_README.html">
+         API Reference
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_compression_cli_README.html">
+         Command-line Interface
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_examples_description.html">
+         Examples
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="pot_docs_FrequentlyAskedQuestions.html">
+         Post-training Optimization Tool Frequently Asked Questions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="docs_nncf_introduction.html">
+       Neural Network Compression Framework
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pot_ranger_README.html">
+       (Experimental) Protecting Model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_deployment_optimization_guide_dldt_optimization_guide.html">
+     Runtime Inference Optimizations
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_deployment_optimization_guide_common.html">
+       General Optimizations
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_deployment_optimization_guide_latency.html">
+       Optimizing for the Latency
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+      <label for="toctree-checkbox-23">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_Model_caching_overview.html">
+         Model Caching Overview
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_deployment_optimization_guide_tput.html">
+       Optimizing for Throughput
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_deployment_optimization_guide_tput_advanced.html">
+       Using Advanced Throughput Options: Streams and Batching
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_deployment_optimization_guide_internals.html">
+       Further Low-Level Implementation Details
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_tuning_utilities.html">
+     Tuning Utilities
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/>
+    <label for="toctree-checkbox-24">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_inference_engine_tools_cross_check_tool_README.html">
+       Cross Check Tool
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_performance_benchmarks.html">
+     Performance Benchmarks
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/>
+    <label for="toctree-checkbox-25">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_performance_benchmarks_openvino.html">
+       Intel® Distribution of OpenVINO™ toolkit Benchmark Results
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/>
+      <label for="toctree-checkbox-26">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_performance_benchmarks_faq.html">
+         Performance Information Frequently Asked Questions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference external" href="https://docs.openvino.ai/downloads/benchmark_files/OV-2022.1-Download-Excel.xlsx">
+         Download Performance Data Spreadsheet in MS Excel* Format
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_performance_int8_vs_fp32.html">
+         Model Accuracy for INT8 and FP32 Precision
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_performance_benchmarks_ovms.html">
+       OpenVINO™ Model Server Benchmark Results
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_dlstreamer.html">
+     Intel® Deep Learning Streamer
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_gapi_gapi_intro.html">
+     Introduction to OpenCV Graph API (G-API)
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/>
+    <label for="toctree-checkbox-27">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_gapi_kernel_api.html">
+       Graph API Kernel API
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_gapi_face_beautification.html">
+       Implementing a Face Beautification Algorithm
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_gapi_gapi_face_analytics_pipeline.html">
+       Building a Face Analytics Pipeline
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://docs.opencv.org/master/">
+     OpenCV* Developer Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://software.intel.com/en-us/openclsdk-devguide">
+     OpenCL™ Developer Guide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ovsa_get_started.html">
+     OpenVINO™ Security Add-on
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_Extensibility_UG_Intro.html">
+     OpenVINO Extensibility Mechanism
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/>
+    <label for="toctree-checkbox-28">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_add_openvino_ops.html">
+       Custom OpenVINO™ Operations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_Frontend_Extensions.html">
+       Frontend Extensions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_GPU.html">
+       How to Implement Custom GPU Operations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_IE_DG_Extensibility_DG_VPU_Kernel.html">
+       How to Implement Custom Layers for VPU (Intel® Neural Compute Stick 2)
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_customize_model_optimizer_Customize_Model_Optimizer.html">
+       Model Optimizer Extensibility
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/>
+      <label for="toctree-checkbox-29">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_customize_model_optimizer_Extending_Model_Optimizer_With_Caffe_Python_Layers.html">
+         Extending Model Optimizer with Caffe* Python Layers
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_transformations.html">
+     Overview of Transformations API
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/>
+    <label for="toctree-checkbox-30">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_model_pass.html">
+       OpenVINO Model Pass
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_matcher_pass.html">
+       OpenVINO Matcher Pass
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_Extensibility_UG_graph_rewrite_pass.html">
+       OpenVINO Graph Rewrite Pass
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="openvino_docs_ie_plugin_dg_overview.html">
+     OpenVINO Plugin Developer Guide
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/>
+    <label for="toctree-checkbox-31">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_plugin.html">
+       Implement Plugin Functionality
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_executable_network.html">
+       Implement Executable Network Functionality
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_infer_request.html">
+       Implement Synchronous Inference Request
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_async_infer_request.html">
+       Implement Asynchronous Inference Request
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_plugin_build.html">
+       Build Plugin Using CMake*
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ie_plugin_dg_plugin_testing.html">
+       Plugin Testing
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="openvino_docs_ie_plugin_detailed_guides.html">
+       Advanced Topics
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/>
+      <label for="toctree-checkbox-32">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_ie_plugin_dg_quantized_networks.html">
+         Quantized networks compute and restrictions
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="openvino_docs_OV_UG_lpt.html">
+         OpenVINO™ Low Precision Transformations
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active has-children">
+      <a class="reference internal" href="openvino_docs_ie_plugin_api_references.html">
+       Plugin API Reference
+      </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/>
+      <label for="toctree-checkbox-33">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul class="current">
+       <li class="toctree-l4 current active">
+        <a class="reference internal" href="groupie_dev_api.html">
+         Inference Engine Plugin API
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupie_transformation_api.html">
+         Inference Engine Transformation API
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_security_guide_introduction.html">
+     Introduction to OpenVINO™ Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_security_guide_workbench.html">
+     Deep Learning Workbench Security
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_OV_UG_protecting_model_guide.html">
+     Using Encrypted Models with OpenVINO™
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ovsa_get_started.html">
+     OpenVINO™ Security Add-on
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tutorials.html">
+   Tutorials
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/>
+  <label for="toctree-checkbox-34">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="api/api_reference.html">
+   API Reference
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" type="checkbox"/>
+  <label for="toctree-checkbox-35">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="groupov_cpp_api.html">
+     OpenVINO Runtime C++ API
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" type="checkbox"/>
+    <label for="toctree-checkbox-36">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="groupov_model_cpp_api.html">
+       Basics
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" type="checkbox"/>
+      <label for="toctree-checkbox-37">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_element_cpp_api.html">
+         Element types
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_layout_cpp_api.html">
+         Layout
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1DiscreteTypeInfo.html">
+         DiscreteTypeInfo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Dimension.html">
+         Dimension
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Extension.html">
+         Extension
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Input.html">
+         Input
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Model.html">
+         Model
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Node.html">
+         Node
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Output.html">
+         Output
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1PartialShape.html">
+         PartialShape
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1preprocess_1_1PrePostProcessor.html">
+         PrePostProcessor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Shape.html">
+         Shape
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="groupov_runtime_cpp_api.html">
+       Inference
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" type="checkbox"/>
+      <label for="toctree-checkbox-38">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_cpp_prop_api.html">
+         Device properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_gna_prop_cpp_api.html">
+         Intel GNA specific properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_ocl_gpu_cpp_api.html">
+         Intel GPU OpenCL interoperability
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_ocl_gpu_prop_cpp_api.html">
+         Intel GPU OpenCL specific properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_hddl_prop_cpp_api.html">
+         Intel HDDL specific properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_myriad_hddl_prop_cpp_api.html">
+         Intel MYRIAD &amp; HDDL specific properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="groupov_runtime_myriad_prop_cpp_api.html">
+         Intel MYRIAD specific properties
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1ProfilingInfo.html">
+         ProfilingInfo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Allocator.html">
+         Allocator
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Busy.html">
+         Busy
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Cancelled.html">
+         Cancelled
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1CompiledModel.html">
+         CompiledModel
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Core.html">
+         Core
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1InferRequest.html">
+         InferRequest
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1RemoteContext.html">
+         RemoteContext
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1RemoteTensor.html">
+         RemoteTensor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Tensor.html">
+         Tensor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1VariableState.html">
+         VariableState
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="groupov_opset_cpp_api.html">
+       Operation sets
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" type="checkbox"/>
+      <label for="toctree-checkbox-39">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1OpSet.html">
+         OpSet
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="groupov_ops_cpp_api.html">
+       Operations
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" type="checkbox"/>
+      <label for="toctree-checkbox-40">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Abs.html">
+         Abs
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Acos.html">
+         Acos
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1Acosh.html">
+         Acosh
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1AdaptiveAvgPool.html">
+         AdaptiveAvgPool
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1AdaptiveMaxPool.html">
+         AdaptiveMaxPool
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Add.html">
+         Add
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Asin.html">
+         Asin
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1Assign.html">
+         Assign
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1Assign.html">
+         Assign
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Atan.html">
+         Atan
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1Atanh.html">
+         Atanh
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1BatchNormInference.html">
+         BatchNormInference
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1BatchNormInference.html">
+         BatchNormInference
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1BatchToSpace.html">
+         BatchToSpace
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1BinaryConvolution.html">
+         BinaryConvolution
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Broadcast.html">
+         Broadcast
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1Broadcast.html">
+         Broadcast
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1Bucketize.html">
+         Bucketize
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1CTCGreedyDecoder.html">
+         CTCGreedyDecoder
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1CTCGreedyDecoderSeqLen.html">
+         CTCGreedyDecoderSeqLen
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1CTCLoss.html">
+         CTCLoss
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Ceiling.html">
+         Ceiling
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Clamp.html">
+         Clamp
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Concat.html">
+         Concat
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Constant.html">
+         Constant
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Convert.html">
+         Convert
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ConvertLike.html">
+         ConvertLike
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Convolution.html">
+         Convolution
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ConvolutionBackpropData.html">
+         ConvolutionBackpropData
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Cos.html">
+         Cos
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Cosh.html">
+         Cosh
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1CumSum.html">
+         CumSum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1DFT.html">
+         DFT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1DeformableConvolution.html">
+         DeformableConvolution
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1DeformableConvolution.html">
+         DeformableConvolution
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1DeformablePSROIPooling.html">
+         DeformablePSROIPooling
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1DepthToSpace.html">
+         DepthToSpace
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Divide.html">
+         Divide
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1Einsum.html">
+         Einsum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Elu.html">
+         Elu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1EmbeddingBagOffsetsSum.html">
+         EmbeddingBagOffsetsSum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1EmbeddingBagPackedSum.html">
+         EmbeddingBagPackedSum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1EmbeddingSegmentsSum.html">
+         EmbeddingSegmentsSum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Equal.html">
+         Equal
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Erf.html">
+         Erf
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Exp.html">
+         Exp
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ExperimentalDetectronDetectionOutput.html">
+         ExperimentalDetectronDetectionOutput
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ExperimentalDetectronGenerateProposalsSingleImage.html">
+         ExperimentalDetectronGenerateProposalsSingleImage
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ExperimentalDetectronPriorGridGenerator.html">
+         ExperimentalDetectronPriorGridGenerator
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ExperimentalDetectronROIFeatureExtractor.html">
+         ExperimentalDetectronROIFeatureExtractor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ExperimentalDetectronTopKROIs.html">
+         ExperimentalDetectronTopKROIs
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ExtractImagePatches.html">
+         ExtractImagePatches
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v9_1_1Eye.html">
+         Eye
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1FakeQuantize.html">
+         FakeQuantize
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Floor.html">
+         Floor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1FloorMod.html">
+         FloorMod
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1GRUCell.html">
+         GRUCell
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1GRUSequence.html">
+         GRUSequence
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Gather.html">
+         Gather
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1Gather.html">
+         Gather
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1Gather.html">
+         Gather
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1GatherElements.html">
+         GatherElements
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1GatherND.html">
+         GatherND
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1GatherND.html">
+         GatherND
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1GatherTree.html">
+         GatherTree
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1Gelu.html">
+         Gelu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Gelu.html">
+         Gelu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Greater.html">
+         Greater
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1GreaterEqual.html">
+         GreaterEqual
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1HSigmoid.html">
+         HSigmoid
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1HSwish.html">
+         HSwish
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1HardSigmoid.html">
+         HardSigmoid
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1I420toBGR.html">
+         I420toBGR
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1I420toRGB.html">
+         I420toRGB
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1IDFT.html">
+         IDFT
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1If.html">
+         If
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1Interpolate.html">
+         Interpolate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Interpolate.html">
+         Interpolate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1LRN.html">
+         LRN
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1LSTMCell.html">
+         LSTMCell
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1LSTMCell.html">
+         LSTMCell
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1LSTMSequence.html">
+         LSTMSequence
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1LSTMSequence.html">
+         LSTMSequence
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Less.html">
+         Less
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1LessEqual.html">
+         LessEqual
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Log.html">
+         Log
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1LogSoftmax.html">
+         LogSoftmax
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1LogicalAnd.html">
+         LogicalAnd
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1LogicalNot.html">
+         LogicalNot
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1LogicalOr.html">
+         LogicalOr
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1LogicalXor.html">
+         LogicalXor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1Loop.html">
+         Loop
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1MVN.html">
+         MVN
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1MVN.html">
+         MVN
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1MatMul.html">
+         MatMul
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1MatrixNms.html">
+         MatrixNms
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1MaxPool.html">
+         MaxPool
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1MaxPool.html">
+         MaxPool
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Maximum.html">
+         Maximum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Minimum.html">
+         Minimum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1Mish.html">
+         Mish
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Mod.html">
+         Mod
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1MulticlassNms.html">
+         MulticlassNms
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Multiply.html">
+         Multiply
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1NV12toBGR.html">
+         NV12toBGR
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1NV12toRGB.html">
+         NV12toRGB
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Negative.html">
+         Negative
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1NonMaxSuppression.html">
+         NonMaxSuppression
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1NonMaxSuppression.html">
+         NonMaxSuppression
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1NonMaxSuppression.html">
+         NonMaxSuppression
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1NonMaxSuppression.html">
+         NonMaxSuppression
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1NonZero.html">
+         NonZero
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1NormalizeL2.html">
+         NormalizeL2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1NotEqual.html">
+         NotEqual
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1OneHot.html">
+         OneHot
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1Op.html">
+         Op
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1PRelu.html">
+         PRelu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1PSROIPooling.html">
+         PSROIPooling
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Pad.html">
+         Pad
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Parameter.html">
+         Parameter
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Power.html">
+         Power
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1PriorBox.html">
+         PriorBox
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1PriorBox.html">
+         PriorBox
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1PriorBoxClustered.html">
+         PriorBoxClustered
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1Proposal.html">
+         Proposal
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Proposal.html">
+         Proposal
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1RNNCell.html">
+         RNNCell
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1RNNSequence.html">
+         RNNSequence
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ROIAlign.html">
+         ROIAlign
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1ROIPooling.html">
+         ROIPooling
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1RandomUniform.html">
+         RandomUniform
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1Range.html">
+         Range
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Range.html">
+         Range
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ReadValue.html">
+         ReadValue
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v6_1_1ReadValue.html">
+         ReadValue
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1ReduceL1.html">
+         ReduceL1
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1ReduceL2.html">
+         ReduceL2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceLogicalAnd.html">
+         ReduceLogicalAnd
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceLogicalOr.html">
+         ReduceLogicalOr
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceMax.html">
+         ReduceMax
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceMean.html">
+         ReduceMean
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceMin.html">
+         ReduceMin
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceProd.html">
+         ReduceProd
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1ReduceSum.html">
+         ReduceSum
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1RegionYolo.html">
+         RegionYolo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Relu.html">
+         Relu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1ReorgYolo.html">
+         ReorgYolo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Reshape.html">
+         Reshape
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Result.html">
+         Result
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Reverse.html">
+         Reverse
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1ReverseSequence.html">
+         ReverseSequence
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v7_1_1Roll.html">
+         Roll
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v5_1_1Round.html">
+         Round
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ScatterElementsUpdate.html">
+         ScatterElementsUpdate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ScatterNDUpdate.html">
+         ScatterNDUpdate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ScatterUpdate.html">
+         ScatterUpdate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Select.html">
+         Select
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Selu.html">
+         Selu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1ShapeOf.html">
+         ShapeOf
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1ShapeOf.html">
+         ShapeOf
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1ShuffleChannels.html">
+         ShuffleChannels
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Sigmoid.html">
+         Sigmoid
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Sign.html">
+         Sign
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Sin.html">
+         Sin
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Sinh.html">
+         Sinh
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1Sink.html">
+         Sink
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1Slice.html">
+         Slice
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1SoftPlus.html">
+         SoftPlus
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v8_1_1Softmax.html">
+         Softmax
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Softmax.html">
+         Softmax
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1SpaceToBatch.html">
+         SpaceToBatch
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1SpaceToDepth.html">
+         SpaceToDepth
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Split.html">
+         Split
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Sqrt.html">
+         Sqrt
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1SquaredDifference.html">
+         SquaredDifference
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Squeeze.html">
+         Squeeze
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1StridedSlice.html">
+         StridedSlice
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Subtract.html">
+         Subtract
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v4_1_1Swish.html">
+         Swish
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Tan.html">
+         Tan
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Tanh.html">
+         Tanh
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1TensorIterator.html">
+         TensorIterator
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Tile.html">
+         Tile
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1TopK.html">
+         TopK
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v3_1_1TopK.html">
+         TopK
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1Transpose.html">
+         Transpose
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Unsqueeze.html">
+         Unsqueeze
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v1_1_1VariadicSplit.html">
+         VariadicSplit
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1op_1_1v0_1_1Xor.html">
+         Xor
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="groupov_pass_cpp_api.html">
+       Transformation passes
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" type="checkbox"/>
+      <label for="toctree-checkbox-41">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1ConstantFolding.html">
+         ConstantFolding
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1ConvertFP32ToFP16.html">
+         ConvertFP32ToFP16
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1GraphRewrite.html">
+         GraphRewrite
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1LowLatency2.html">
+         LowLatency2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1MakeStateful.html">
+         MakeStateful
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1Manager.html">
+         Manager
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1MatcherPass.html">
+         MatcherPass
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1ModelPass.html">
+         ModelPass
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1PassBase.html">
+         PassBase
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1PassConfig.html">
+         PassConfig
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1Serialize.html">
+         Serialize
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1StreamSerialize.html">
+         StreamSerialize
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1Validate.html">
+         Validate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1pass_1_1VisualizeTree.html">
+         VisualizeTree
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="namespaceov.html">
+       ov
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" type="checkbox"/>
+      <label for="toctree-checkbox-42">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1batch_util.html">
+         batch_util
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1descriptor.html">
+         descriptor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1detail.html">
+         detail
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1device.html">
+         device
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1element.html">
+         element
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1frontend.html">
+         frontend
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1hint.html">
+         hint
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1intel_gna.html">
+         intel_gna
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1intel_gpu.html">
+         intel_gpu
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1intel_myriad.html">
+         intel_myriad
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1layout.html">
+         layout
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1log.html">
+         log
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1op.html">
+         op
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset1.html">
+         opset1
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset2.html">
+         opset2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset3.html">
+         opset3
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset4.html">
+         opset4
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset5.html">
+         opset5
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset6.html">
+         opset6
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset7.html">
+         opset7
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset8.html">
+         opset8
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1opset9.html">
+         opset9
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1pass.html">
+         pass
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1preprocess.html">
+         preprocess
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1runtime.html">
+         runtime
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1streams.html">
+         streams
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespaceov_1_1util.html">
+         util
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="enumov_1_1PropertyMutability.html">
+         PropertyMutability
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1CheckLocInfo.html">
+         CheckLocInfo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1MemBandwidthPressure.html">
+         MemBandwidthPressure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1Property.html">
+         Property
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1PropertyName.html">
+         PropertyName
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1RawNodeOutput.html">
+         RawNodeOutput
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1SoPtr.html">
+         SoPtr
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1Version.html">
+         Version
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structov_1_1element_type_traits.html">
+         element_type_traits
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AllocatorImpl.html">
+         AllocatorImpl
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Any.html">
+         Any
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AssertFailure.html">
+         AssertFailure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AttributeAdapter.html">
+         AttributeAdapter
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AttributeVisitor.html">
+         AttributeVisitor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AxisSet.html">
+         AxisSet
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1AxisVector.html">
+         AxisVector
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1BaseOpExtension.html">
+         BaseOpExtension
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Coordinate.html">
+         Coordinate
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1CoordinateDiff.html">
+         CoordinateDiff
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1DirectValueAccessor.html">
+         DirectValueAccessor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1EnumAttributeAdapterBase.html">
+         EnumAttributeAdapterBase
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1EnumMask.html">
+         EnumMask
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1EnumNames.html">
+         EnumNames
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Exception.html">
+         Exception
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1IndirectScalarValueAccessor.html">
+         IndirectScalarValueAccessor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1IndirectVectorValueAccessor.html">
+         IndirectVectorValueAccessor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Input.html">
+         Input
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Interval.html">
+         Interval
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1LayoutAttribute.html">
+         LayoutAttribute
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1NmsSelectedIndices.html">
+         NmsSelectedIndices
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1NodeValidationFailure.html">
+         NodeValidationFailure
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1NotImplemented.html">
+         NotImplemented
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1OpExtension.html">
+         OpExtension
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Output.html">
+         Output
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1PrecisionSensitive.html">
+         PrecisionSensitive
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1PreprocessingAttribute.html">
+         PreprocessingAttribute
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1PrimitivesPriority.html">
+         PrimitivesPriority
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Property.html">
+         Property
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1RuntimeAttribute.html">
+         RuntimeAttribute
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1Strides.html">
+         Strides
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1StridesPropagation.html">
+         StridesPropagation
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1ValueAccessor.html">
+         ValueAccessor
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1VisitorAdapter.html">
+         VisitorAdapter
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1bfloat16.html">
+         bfloat16
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classov_1_1float16.html">
+         float16
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="api/ie_python_api/api.html">
+     OpenVINO Python API
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" type="checkbox"/>
+    <label for="toctree-checkbox-43">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="api/ie_python_api/compatibility.html">
+       OpenVINO Python API - Compatibility
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="model_zoo.html">
+   Model Zoo
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" type="checkbox"/>
+  <label for="toctree-checkbox-44">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="resources.html">
+   Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" type="checkbox"/>
+  <label for="toctree-checkbox-45">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://software.intel.com/content/www/us/en/develop/articles/openvino-relnotes.html">
+     Release Notes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_OV_UG_supported_plugins_Supported_Devices.html">
+     Supported Devices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html">
+     Supported Framework Layers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_OV_Glossary.html">
+     Glossary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_Legal_Information.html">
+     Legal Information
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_MO_DG_IR_and_opsets.html">
+     Deep Learning Network Intermediate Representation and Operation Sets in OpenVINO™
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_ops_opset.html">
+     Available Operations Sets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" type="checkbox"/>
+    <label for="toctree-checkbox-46">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset9.html">
+       opset9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset8.html">
+       opset8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset7.html">
+       opset7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset6.html">
+       opset6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset5.html">
+       opset5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset4.html">
+       opset4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset3.html">
+       opset3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset2.html">
+       opset2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_opset1.html">
+       opset1
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_ops_broadcast_rules.html">
+     Broadcast Rules For Elementwise Operations
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="openvino_docs_operations_specifications.html">
+     Operations Specifications
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" type="checkbox"/>
+    <label for="toctree-checkbox-47">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Abs_1.html">
+       Abs-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Acos_1.html">
+       Acos-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Acosh_3.html">
+       Acosh-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_pooling_AdaptiveAvgPool_8.html">
+       AdaptiveAvgPool-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_pooling_AdaptiveMaxPool_8.html">
+       AdaptiveMaxPool-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Add_1.html">
+       Add-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Asin_1.html">
+       Asin-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Asinh_3.html">
+       Asinh-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_Assign_3.html">
+       Assign-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Atan_1.html">
+       Atan-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Atanh_3.html">
+       Atanh-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_pooling_AvgPool_1.html">
+       AvgPool-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_BatchNormInference_1.html">
+       BatchNormInference-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_BatchNormInference_5.html">
+       BatchNormInference-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_BatchToSpace_2.html">
+       BatchToSpace-2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_BinaryConvolution_1.html">
+       BinaryConvolution-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Broadcast_1.html">
+       Broadcast-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Broadcast_3.html">
+       Broadcast-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_condition_Bucketize_3.html">
+       Bucketize-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_CTCGreedyDecoder_1.html">
+       CTCGreedyDecoder-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_CTCGreedyDecoderSeqLen_6.html">
+       CTCGreedyDecoderSeqLen-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Ceiling_1.html">
+       Ceiling-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Clamp_1.html">
+       Clamp-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Concat_1.html">
+       Concat-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_Constant_1.html">
+       Constant-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_type_ConvertLike_1.html">
+       ConvertLike-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_type_Convert_1.html">
+       Convert-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_ConvolutionBackpropData_1.html">
+       ConvolutionBackpropData-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_Convolution_1.html">
+       Convolution-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Cos_1.html">
+       Cos-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Cosh_1.html">
+       Cosh-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_CTCLoss_4.html">
+       CTCLoss-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_CumSum_3.html">
+       CumSum-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_DeformableConvolution_1.html">
+       DeformableConvolution-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_DeformableConvolution_8.html">
+       DeformableConvolution-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_DeformablePSROIPooling_1.html">
+       DeformablePSROIPooling-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_DepthToSpace_1.html">
+       DepthToSpace-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_DetectionOutput_1.html">
+       DetectionOutput-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_DetectionOutput_8.html">
+       DetectionOutput-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_signals_DFT_7.html">
+       DFT-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Divide_1.html">
+       Divide-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_matrix_Einsum_7.html">
+       Einsum-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Elu_1.html">
+       Elu-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sparse_EmbeddingBagOffsetsSum_3.html">
+       EmbeddingBagOffsetsSum-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sparse_EmbeddingBagPackedSum_3.html">
+       EmbeddingBagPackedSum-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sparse_EmbeddingSegmentsSum_3.html">
+       EmbeddingSegmentsSum-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_Equal_1.html">
+       Equal-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Erf_1.html">
+       Erf-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Exp_1.html">
+       Exp-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ExperimentalDetectronDetectionOutput_6.html">
+       ExperimentalDetectronDetectionOutput-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ExperimentalDetectronGenerateProposalsSingleImage_6.html">
+       ExperimentalDetectronGenerateProposalsSingleImage-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ExperimentalDetectronPriorGridGenerator_6.html">
+       ExperimentalDetectronPriorGridGenerator-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ExperimentalDetectronROIFeatureExtractor_6.html">
+       ExperimentalDetectronROIFeatureExtractor-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_ExperimentalDetectronTopKROIs_6.html">
+       ExperimentalDetectronTopKROIs-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ExtractImagePatches_3.html">
+       ExtractImagePatches-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_generation_Eye_9.html">
+       Eye-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_quantization_FakeQuantize_1.html">
+       FakeQuantize-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_FloorMod_1.html">
+       FloorMod-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Floor_1.html">
+       Floor-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_GRN_1.html">
+       GRN-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_GRUCell_3.html">
+       GRUCell-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_GRUSequence_5.html">
+       GRUSequence-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_GatherTree_1.html">
+       GatherTree-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Gather_1.html">
+       Gather-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Gather_7.html">
+       Gather-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Gather_8.html">
+       Gather-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_GatherElements_6.html">
+       GatherElements-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_GatherND_5.html">
+       GatherND-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_GatherND_8.html">
+       GatherND-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_GELU_2.html">
+       GELU-2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_GELU_7.html">
+       GELU-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_GenerateProposals_9.html">
+       GenerateProposals-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_GreaterEqual_1.html">
+       GreaterEqual-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_Greater_1.html">
+       Greater-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_GroupConvolutionBackpropData_1.html">
+       GroupConvolutionBackpropData-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_convolution_GroupConvolution_1.html">
+       GroupConvolution-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_HardSigmoid_1.html">
+       HardSigmoid-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_HSigmoid_5.html">
+       HSigmoid-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_HSwish_4.html">
+       HSwish-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_I420toBGR_8.html">
+       I420toBGR-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_I420toRGB_8.html">
+       I420toRGB-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_signals_IDFT_7.html">
+       IDFT-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_signals_IRDFT_9.html">
+       IRDFT-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_If_8.html">
+       If-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_Interpolate_1.html">
+       Interpolate-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_Interpolate_4.html">
+       Interpolate-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_LRN_1.html">
+       LRN-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_LSTMCell_1.html">
+       LSTMCell-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_LSTMSequence_1.html">
+       LSTMSequence-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_LessEqual_1.html">
+       LessEqual-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_Less_1.html">
+       Less-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Log_1.html">
+       Log-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_logical_LogicalAnd_1.html">
+       LogicalAnd-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_logical_LogicalNot_1.html">
+       LogicalNot-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_logical_LogicalOr_1.html">
+       LogicalOr-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_logical_LogicalXor_1.html">
+       LogicalXor-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_LogSoftmax_5.html">
+       LogSoftmax-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_Loop_5.html">
+       Loop-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_MVN_1.html">
+       MVN-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_MVN_6.html">
+       MVN-6
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_matrix_MatMul_1.html">
+       MatMul-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_MatrixNms_8.html">
+       MatrixNms-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_pooling_MaxPool_1.html">
+       MaxPool-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_pooling_MaxPool_8.html">
+       MaxPool-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Maximum_1.html">
+       Maximum-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Minimum_1.html">
+       Minimum-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Mish_4.html">
+       Mish-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Mod_1.html">
+       Mod-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_MulticlassNonMaxSuppression_8.html">
+       MulticlassNonMaxSuppression-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_MulticlassNonMaxSuppression_9.html">
+       MulticlassNonMaxSuppression-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Multiply_1.html">
+       Multiply-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Negative_1.html">
+       Negative-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_NonMaxSuppression_1.html">
+       NonMaxSuppression-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_NonMaxSuppression_3.html">
+       NonMaxSuppression-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_NonMaxSuppression_4.html">
+       NonMaxSuppression-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_NonMaxSuppression_5.html">
+       NonMaxSuppression-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_NonMaxSuppression_9.html">
+       NonMaxSuppression-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_condition_NonZero_3.html">
+       NonZero-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_normalization_NormalizeL2_1.html">
+       NormalizeL2-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_comparison_NotEqual_1.html">
+       NotEqual-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_NV12toBGR_8.html">
+       NV12toBGR-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_image_NV12toRGB_8.html">
+       NV12toRGB-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_OneHot_1.html">
+       OneHot-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_PReLU_1.html">
+       PReLU-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_PSROIPooling_1.html">
+       PSROIPooling-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Pad_1.html">
+       Pad-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_Parameter_1.html">
+       Parameter-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Power_1.html">
+       Power-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_PriorBoxClustered_1.html">
+       PriorBoxClustered-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_PriorBox_1.html">
+       PriorBox-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_PriorBox_8.html">
+       PriorBox-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_Proposal_1.html">
+       Proposal-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_Proposal_4.html">
+       Proposal-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_generation_RandomUniform_8.html">
+       RandomUniform-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_generation_Range_1.html">
+       Range-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_generation_Range_4.html">
+       Range-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_signals_RDFT_9.html">
+       RDFT-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_ReadValue_3.html">
+       ReadValue-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_ReLU_1.html">
+       ReLU-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceL1_4.html">
+       ReduceL1-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceL2_4.html">
+       ReduceL2-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceLogicalAnd_1.html">
+       ReduceLogicalAnd-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceLogicalOr_1.html">
+       ReduceLogicalOr-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceMax_1.html">
+       ReduceMax-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceMean_1.html">
+       ReduceMean-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceMin_1.html">
+       ReduceMin-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceProd_1.html">
+       ReduceProd-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_reduction_ReduceSum_1.html">
+       ReduceSum-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_RegionYolo_1.html">
+       RegionYolo-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ReorgYolo_1.html">
+       ReorgYolo-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_shape_Reshape_1.html">
+       Reshape-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_Result_1.html">
+       Result-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Reverse_1.html">
+       Reverse-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ReverseSequence_1.html">
+       ReverseSequence-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_RNNCell_3.html">
+       RNNCell-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sequence_RNNSequence_5.html">
+       RNNSequence-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ROIAlign_3.html">
+       ROIAlign-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ROIAlign_9.html">
+       ROIAlign-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_detection_ROIPooling_1.html">
+       ROIPooling-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Roll_7.html">
+       Roll-7
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Round_5.html">
+       Round-5
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ScatterElementsUpdate_3.html">
+       ScatterElementsUpdate-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ScatterNDUpdate_3.html">
+       ScatterNDUpdate-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ScatterUpdate_3.html">
+       ScatterUpdate-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_condition_Select_1.html">
+       Select-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Selu_1.html">
+       Selu-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_shape_ShapeOf_1.html">
+       ShapeOf-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_shape_ShapeOf_3.html">
+       ShapeOf-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_ShuffleChannels_1.html">
+       ShuffleChannels-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Sigmoid_1.html">
+       Sigmoid-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Sign_1.html">
+       Sign-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Sin_1.html">
+       Sin-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Sinh_1.html">
+       Sinh-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Slice_8.html">
+       Slice-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_SoftMax_1.html">
+       SoftMax-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_SoftMax_8.html">
+       SoftMax-8
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_SoftPlus_4.html">
+       SoftPlus-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_SoftSign_9.html">
+       SoftSign-9
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_SpaceToBatch_2.html">
+       SpaceToBatch-2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_SpaceToDepth_1.html">
+       SpaceToDepth-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Split_1.html">
+       Split-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Sqrt_1.html">
+       Sqrt-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_SquaredDifference_1.html">
+       SquaredDifference-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_shape_Squeeze_1.html">
+       Squeeze-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_StridedSlice_1.html">
+       StridedSlice-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Subtract_1.html">
+       Subtract-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_activation_Swish_4.html">
+       Swish-4
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Tan_1.html">
+       Tan-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_arithmetic_Tanh_1.html">
+       Tanh-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_infrastructure_TensorIterator_1.html">
+       TensorIterator-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Tile_1.html">
+       Tile-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_TopK_1.html">
+       TopK-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_sort_TopK_3.html">
+       TopK-3
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_Transpose_1.html">
+       Transpose-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_shape_Unsqueeze_1.html">
+       Unsqueeze-1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openvino_docs_ops_movement_VariadicSplit_1.html">
+       VariadicSplit-1
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="openvino_docs_MO_DG_prepare_model_convert_model_IR_suitable_for_INT8_inference.html">
+     Intermediate Representation Suitable for INT8 Inference
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference external" href="https://www.intel.com/openvino-success-stories">
+     Case Studies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detailed-documentation">
+   Detailed Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fields">
+     Fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construction">
+     Construction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>struct InferenceEngine::IStreamsExecutor::Config</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detailed-documentation">
+   Detailed Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fields">
+     Fields
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construction">
+     Construction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="struct-inferenceengine-istreamsexecutor-config">
+<span id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config"></span><span id="index-0"></span><h1>struct InferenceEngine::IStreamsExecutor::Config<a class="headerlink" href="#struct-inferenceengine-istreamsexecutor-config" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p>Defines <a class="reference internal" href="classInferenceEngine_1_1IStreamsExecutor.html#doxid-class-inference-engine-1-1-i-streams-executor"><span class="std std-ref">IStreamsExecutor</span></a> configuration. <a class="reference internal" href="#details-struct-inference-engine-1-1-i-streams-executor-1-1-config"><span class="std std-ref">More…</span></a></p>
+<div class="highlight doxyrest-overview-code-block"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ie_istreams_executor.hpp&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">Config</span>
+<span class="p">{</span>
+    <span class="c1">// enums</span>
+
+    <span class="k">enum</span> <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a522c480fde618152bec3c01ff470e84e"><span class="std std-ref">PreferredCoreType</span></a><span></span><span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1aef59325cbbe6a22cb667c88aa7c07c23"><span class="std std-ref">_name</span></a><span></span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a5dc259789f67b2f1af1461fc0cb8f033"><span class="std std-ref">_streams</span></a><span></span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a8f544685992465ae279f6dbfe3ba6f1d"><span class="std std-ref">_threadsPerStream</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872"><span class="std std-ref">ThreadBindingType</span></a><span></span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a944fd72d6d1cbdb2a9a31499ea5d0b1c"><span class="std std-ref">_threadBindingType</span></a><span></span> <span class="o">=</span> <span class="n">ThreadBindingType</span><span class="o">::</span><span class="n">NONE</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a05ba9a478614b69b151f1f276c730ba0"><span class="std std-ref">_threadBindingStep</span></a><span></span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1ad463dfbd1548760f2ca19b9d9f52ff24"><span class="std std-ref">_threadBindingOffset</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a4ad9d4c405e21ef198aecf92fc48e6c3"><span class="std std-ref">_threads</span></a><span></span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">enum</span> <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a522c480fde618152bec3c01ff470e84e"><span class="std std-ref">InferenceEngine::IStreamsExecutor::Config::PreferredCoreType</span></a><span></span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a478003234b78c6be420ec4e2073fc991"><span class="std std-ref">_threadPreferredCoreType</span></a><span></span> <span class="o">=</span>             <span class="n">PreferredCoreType</span><span class="o">::</span><span class="n">ANY</span><span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a49a38a03969d371ee5080fc1a83a0660"><span class="std std-ref">Config</span></a><span></span><span class="p">(</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;StreamsExecutor&quot;</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">streams</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">threadsPerStream</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872"><span class="std std-ref">ThreadBindingType</span></a><span></span> <span class="n">threadBindingType</span> <span class="o">=</span> <span class="n">ThreadBindingType</span><span class="o">::</span><span class="n">NONE</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">threadBindingStep</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">threadBindingOffset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="kt">int</span> <span class="n">threads</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a522c480fde618152bec3c01ff470e84e"><span class="std std-ref">PreferredCoreType</span></a><span></span> <span class="n">threadPreferredCoreType</span> <span class="o">=</span> <span class="n">PreferredCoreType</span><span class="o">::</span><span class="n">ANY</span>
+        <span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1af5194c42f86951299ba6a9ef334627ef"><span class="std std-ref">SupportedKeys</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">void</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a55b63d4d95c2c3f856b603dd128ea2b4"><span class="std std-ref">SetConfig</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">);</span>
+    <a class="reference internal" href="namespaceInferenceEngine.html#doxid-namespace-inference-engine-1aff2231f886c9f8fc9c226fd343026789"><span class="std std-ref">Parameter</span></a><span></span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a3fc899627d5a662b5920ca799d46299f"><span class="std std-ref">GetConfig</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="n">Config</span> <a class="reference internal" href="#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1aa86ace5a369404be513fe5accb022dbb"><span class="std std-ref">MakeDefaultMultiThreaded</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">Config</span><span class="o">&amp;</span> <span class="n">initial</span><span class="p">,</span>
+        <span class="k">const</span> <span class="kt">bool</span> <span class="n">fp_intesive</span> <span class="o">=</span> <span class="nb">true</span>
+        <span class="p">);</span>
+
+    <span class="k">static</span> <span class="kt">int</span> GetDefaultNumStreams<span></span><span class="p">();</span>
+<span class="p">};</span></pre></div></div></section>
+<section id="detailed-documentation">
+<span id="details-struct-inference-engine-1-1-i-streams-executor-1-1-config"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">#</a></h2>
+<p>Defines <a class="reference internal" href="classInferenceEngine_1_1IStreamsExecutor.html#doxid-class-inference-engine-1-1-i-streams-executor"><span class="std std-ref">IStreamsExecutor</span></a> configuration.</p>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">#</a></h3>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1aef59325cbbe6a22cb667c88aa7c07c23"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">_name</span></pre></div></div><p>Used by <code class="docutils literal notranslate"><span class="pre">ITT</span></code> to name executor threads.</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a5dc259789f67b2f1af1461fc0cb8f033"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_streams</span> <span class="o">=</span> <span class="mi">1</span></pre></div></div><p>Number of streams.</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a8f544685992465ae279f6dbfe3ba6f1d"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_threadsPerStream</span> <span class="o">=</span> <span class="mi">0</span></pre></div></div><p>Number of threads per stream that executes <code class="docutils literal notranslate"><span class="pre">ie_parallel</span></code> calls.</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a944fd72d6d1cbdb2a9a31499ea5d0b1c"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872"><span class="std std-ref">ThreadBindingType</span></a><span></span> <span class="n">_threadBindingType</span> <span class="o">=</span> <span class="n">ThreadBindingType</span><span class="o">::</span><span class="n">NONE</span></pre></div></div><p>Thread binding to hardware resource type. No binding by default</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a05ba9a478614b69b151f1f276c730ba0"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_threadBindingStep</span> <span class="o">=</span> <span class="mi">1</span></pre></div></div><p>In case of <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872ac31f62d8f7987f4816c5fbfffb26429f"><span class="std std-ref">CORES</span></a> binding offset type thread binded to cores with defined step</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1ad463dfbd1548760f2ca19b9d9f52ff24"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_threadBindingOffset</span> <span class="o">=</span> <span class="mi">0</span></pre></div></div><p>In case of <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872ac31f62d8f7987f4816c5fbfffb26429f"><span class="std std-ref">CORES</span></a> binding offset type thread binded to cores starting from offset</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a4ad9d4c405e21ef198aecf92fc48e6c3"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">_threads</span> <span class="o">=</span> <span class="mi">0</span></pre></div></div><p>Number of threads distributed between streams. Reserved. Should not be used.</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a478003234b78c6be420ec4e2073fc991"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="k">enum</span> <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a522c480fde618152bec3c01ff470e84e"><span class="std std-ref">InferenceEngine::IStreamsExecutor::Config::PreferredCoreType</span></a><span></span> <span class="n">_threadPreferredCoreType</span> <span class="o">=</span>             <span class="n">PreferredCoreType</span><span class="o">::</span><span class="n">ANY</span></pre></div></div><p>In case of <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872a1a7a5d64f7a66531b134c7caf524ad81"><span class="std std-ref">HYBRID_AWARE</span></a> hints the TBB to affinitize.</p>
+</section>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">#</a></h3>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a49a38a03969d371ee5080fc1a83a0660"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="n">Config</span><span class="p">(</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;StreamsExecutor&quot;</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">streams</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">threadsPerStream</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html#doxid-class-inference-engine-1-1-i-streams-executor-1ac87e784e6e176865ef4518b8e957a872"><span class="std std-ref">ThreadBindingType</span></a><span></span> <span class="n">threadBindingType</span> <span class="o">=</span> <span class="n">ThreadBindingType</span><span class="o">::</span><span class="n">NONE</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">threadBindingStep</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">threadBindingOffset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">threads</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <a class="reference internal" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html#doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a522c480fde618152bec3c01ff470e84e"><span class="std std-ref">PreferredCoreType</span></a><span></span> <span class="n">threadPreferredCoreType</span> <span class="o">=</span> <span class="n">PreferredCoreType</span><span class="o">::</span><span class="n">ANY</span>
+    <span class="p">)</span></pre></div></div><p>A constructor with arguments.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>The executor name</p></td>
+</tr>
+<tr class="row-even"><td><p>streams</p></td>
+<td><p>Number of streams.</p></td>
+</tr>
+<tr class="row-odd"><td><p>threadsPerStream</p></td>
+<td><p>Number of threads per stream that executes <code class="docutils literal notranslate"><span class="pre">ie_parallel</span></code> calls.</p></td>
+</tr>
+<tr class="row-even"><td><p>threadBindingType</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>threadBindingStep</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>threadBindingOffset</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>threads</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>threadPreferBigCores</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">#</a></h3>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1af5194c42f86951299ba6a9ef334627ef"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">SupportedKeys</span><span class="p">()</span> <span class="k">const</span></pre></div></div><p>Supported Configuration keys.</p>
+<p class="rubric">Returns:</p>
+<p>vector of supported configuration keys</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a55b63d4d95c2c3f856b603dd128ea2b4"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">SetConfig</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">)</span></pre></div></div><p>Parses configuration key/value pair.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>key</p></td>
+<td><p>configuration key</p></td>
+</tr>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>configuration values</p></td>
+</tr>
+</tbody>
+</table>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1a3fc899627d5a662b5920ca799d46299f"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><a class="reference internal" href="namespaceInferenceEngine.html#doxid-namespace-inference-engine-1aff2231f886c9f8fc9c226fd343026789"><span class="std std-ref">Parameter</span></a><span></span> <span class="n">GetConfig</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span></pre></div></div><p>Return configuration value.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>key</p></td>
+<td><p>configuration key</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>configuration value wrapped into Parameter</p>
+<span class="target" id="doxid-struct-inference-engine-1-1-i-streams-executor-1-1-config-1aa86ace5a369404be513fe5accb022dbb"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">Config</span> <span class="n">MakeDefaultMultiThreaded</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">Config</span><span class="o">&amp;</span> <span class="n">initial</span><span class="p">,</span>
+    <span class="k">const</span> <span class="kt">bool</span> <span class="n">fp_intesive</span> <span class="o">=</span> <span class="nb">true</span>
+    <span class="p">)</span></pre></div></div><p>Create appropriate multithreaded configuration filing unconfigured values from initial configuration using hardware properties.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>initial</p></td>
+<td><p>Inital configuration</p></td>
+</tr>
+<tr class="row-even"><td><p>fp_intesive</p></td>
+<td><p>additional hint for the the (Hybrid) core-types selection logic whether the executor should be configured for floating point intensive work (as opposite to int8 intensive)</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>configured values</p>
+</section>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="enumInferenceEngine_1_1IStreamsExecutor_1_1ThreadBindingType.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">enum InferenceEngine::IStreamsExecutor::ThreadBindingType</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="enumInferenceEngine_1_1IStreamsExecutor_1_1Config_1_1PreferredCoreType.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">enum InferenceEngine::IStreamsExecutor::Config::PreferredCoreType</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Intel®<br/>
+  
+      &copy; Copyright 2021, Intel®.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
